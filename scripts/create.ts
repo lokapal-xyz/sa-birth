@@ -4,6 +4,7 @@ import { $ } from 'bun';
 import {
   existsSync,
   mkdirSync,
+  renameSync,
   readdirSync,
   readFileSync,
   rmSync,
@@ -85,6 +86,36 @@ function replaceAll(text: string, replacements: Record<string, string>): string 
   return out;
 }
 
+function replaceInFile(filePath: string, replacements: Record<string, string>) {
+  if (!existsSync(filePath)) return;
+  const text = readFileSync(filePath, 'utf8');
+  const updated = replaceAll(text, replacements);
+  if (updated !== text) {
+    writeFileSync(filePath, updated);
+  }
+}
+
+function replaceInDir(dir: string, replacements: Record<string, string>) {
+  if (!existsSync(dir)) return;
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (shouldSkip(entry.name)) continue;
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      replaceInDir(entryPath, replacements);
+    } else if (entry.isFile()) {
+      replaceInFile(entryPath, replacements);
+    }
+  }
+}
+
+function renameIfExists(fromPath: string, toPath: string) {
+  if (!existsSync(fromPath)) return;
+  if (fromPath === toPath) return;
+  rmSync(toPath, { recursive: true, force: true });
+  mkdirSync(path.dirname(toPath), { recursive: true });
+  renameSync(fromPath, toPath);
+}
+
 function updateWorkspaceMembers(repoRoot: string, gameSlug: string) {
   const cargoPath = path.join(repoRoot, 'Cargo.toml');
   const cargoText = readFileSync(cargoPath, 'utf8');
@@ -127,19 +158,19 @@ if (!isValidSlug(gameSlug)) {
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..');
 const contractsRoot = path.join(repoRoot, 'contracts');
-const templateContractDir = path.join(contractsRoot, 'template');
+const exampleContractDir = path.join(contractsRoot, 'number-guess');
 const newContractDir = path.join(contractsRoot, gameSlug);
-const frontendTemplateDir = path.join(repoRoot, 'frontend-template');
+const frontendTemplateDir = path.join(repoRoot, 'template_frontend');
 const frontendSlug = `${gameSlug}-frontend`;
 const newFrontendDir = path.join(repoRoot, frontendSlug);
 
-if (!existsSync(templateContractDir)) {
-  console.error(`\n❌ Missing template contract at ${templateContractDir}`);
+if (!existsSync(exampleContractDir)) {
+  console.error(`\n❌ Missing number-guess example contract at ${exampleContractDir}`);
   process.exit(1);
 }
 
 if (!existsSync(frontendTemplateDir)) {
-  console.error(`\n❌ Missing frontend template at ${frontendTemplateDir}`);
+  console.error(`\n❌ Missing number-guess frontend example at ${frontendTemplateDir}`);
   process.exit(1);
 }
 
@@ -163,8 +194,8 @@ if (existsSync(newFrontendDir)) {
 
 console.log(`\n🧩 Creating game: ${gameSlug}`);
 
-console.log('  • Copying contract template...');
-copyDir(templateContractDir, newContractDir);
+console.log('  • Copying number-guess contract...');
+copyDir(exampleContractDir, newContractDir);
 
 const pascalName = pascalFromSlug(gameSlug);
 const titleName = titleCaseFromSlug(gameSlug);
@@ -172,22 +203,18 @@ const camelName = camelFromSlug(gameSlug);
 const envKey = toEnvKey(gameSlug);
 
 const replacements = {
-  'template-game': gameSlug,
-  'TemplateGame': pascalName || 'Game',
-  'Template Game': titleName || 'Game',
+  'number-guess': gameSlug,
+  'NumberGuess': pascalName || 'Game',
+  'Number Guess': titleName || 'Game',
+  'numberGuess': camelName || 'game',
+  'NUMBER_GUESS': envKey || 'GAME',
 };
-
-for (const relPath of ['Cargo.toml', 'src/lib.rs', 'src/test.rs']) {
-  const filePath = path.join(newContractDir, relPath);
-  if (!existsSync(filePath)) continue;
-  const text = readFileSync(filePath, 'utf8');
-  writeFileSync(filePath, replaceAll(text, replacements));
-}
+replaceInDir(newContractDir, replacements);
 
 console.log('  • Registering contract in workspace...');
 updateWorkspaceMembers(repoRoot, gameSlug);
 
-console.log('  • Generating standalone frontend...');
+console.log('  • Copying number-guess frontend...');
 copyDir(frontendTemplateDir, newFrontendDir);
 
 const frontendPackagePath = path.join(newFrontendDir, 'package.json');
@@ -209,407 +236,30 @@ if (existsSync(gamesDir)) {
 }
 mkdirSync(gamesDir, { recursive: true });
 
+const exampleGameDir = path.join(frontendTemplateDir, 'src', 'games', 'number-guess');
+if (!existsSync(exampleGameDir)) {
+  console.error(`\n❌ Missing number-guess game frontend at ${exampleGameDir}`);
+  process.exit(1);
+}
+
 const newGameDir = path.join(gamesDir, gameSlug);
-mkdirSync(newGameDir, { recursive: true });
+copyDir(exampleGameDir, newGameDir);
 
 const componentName = `${pascalName}Game`;
-const serviceClassName = `${pascalName}Service`;
 const serviceFileBase = `${camelName}Service`;
-const cssFileBase = `${camelName}Game`;
 
-const gameComponent = `import { useMemo, useState } from 'react';
-import { useWallet } from '@/hooks/useWallet';
-import { ${serviceClassName} } from './${serviceFileBase}';
-import './${cssFileBase}.css';
+renameIfExists(
+  path.join(newGameDir, 'NumberGuessGame.tsx'),
+  path.join(newGameDir, `${componentName}.tsx`)
+);
+renameIfExists(
+  path.join(newGameDir, 'numberGuessService.ts'),
+  path.join(newGameDir, `${serviceFileBase}.ts`)
+);
 
-export interface ${componentName}Props {
-  userAddress: string;
-  contractId: string;
-  currentEpoch: number;
-  availablePoints: bigint;
-  onGameComplete: () => void;
-}
-
-export function ${componentName}({
-  userAddress,
-  contractId,
-  currentEpoch,
-  availablePoints,
-  onGameComplete,
-}: ${componentName}Props) {
-  const { getContractSigner } = useWallet();
-  const [sessionId, setSessionId] = useState(1);
-  const [player2, setPlayer2] = useState('');
-  const [player1Points, setPlayer1Points] = useState(10);
-  const [player2Points, setPlayer2Points] = useState(10);
-  const [status, setStatus] = useState<'idle' | 'started' | 'finished'>('idle');
-  const [error, setError] = useState<string | null>(null);
-
-  const service = useMemo(() => new ${serviceClassName}(contractId), [contractId]);
-
-  const handleStart = async () => {
-    if (!contractId) {
-      setError('Contract ID missing. Run bun run setup or update your config.');
-      return;
-    }
-
-    setError(null);
-    try {
-      const signer = getContractSigner();
-      await service.startGame(
-        sessionId,
-        userAddress,
-        player2,
-        BigInt(player1Points),
-        BigInt(player2Points),
-        signer
-      );
-      setStatus('started');
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Unable to start game');
-    }
-  };
-
-  const handleFinish = async () => {
-    if (!contractId) {
-      setError('Contract ID missing. Run bun run setup or update your config.');
-      return;
-    }
-
-    setError(null);
-    try {
-      const signer = getContractSigner();
-      await service.finishGame(sessionId, userAddress, true, signer);
-      setStatus('finished');
-      onGameComplete();
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Unable to finish game');
-    }
-  };
-
-  return (
-    <div className="card template-game">
-      <div className="template-header">
-        <div>
-          <h3>${titleName}</h3>
-          <p className="template-subtitle">Template game flow wired to Game Hub.</p>
-        </div>
-        <div className={\`template-status status-\${status}\`}>
-          <span className="pulse-dot" aria-hidden="true" />
-          <span>{status === 'idle' ? 'Ready' : status === 'started' ? 'In progress' : 'Completed'}</span>
-        </div>
-      </div>
-
-      <div className="template-grid">
-        <label>
-          Session ID
-          <input
-            type="number"
-            min={1}
-            value={sessionId}
-            onChange={(event) => setSessionId(Number(event.target.value))}
-          />
-        </label>
-        <label>
-          Player 1 (you)
-          <input type="text" value={userAddress} readOnly />
-        </label>
-        <label>
-          Player 2
-          <input
-            type="text"
-            placeholder="G..."
-            value={player2}
-            onChange={(event) => setPlayer2(event.target.value)}
-          />
-        </label>
-        <label>
-          Player 1 Points
-          <input
-            type="number"
-            min={1}
-            value={player1Points}
-            onChange={(event) => setPlayer1Points(Number(event.target.value))}
-          />
-        </label>
-        <label>
-          Player 2 Points
-          <input
-            type="number"
-            min={1}
-            value={player2Points}
-            onChange={(event) => setPlayer2Points(Number(event.target.value))}
-          />
-        </label>
-      </div>
-
-      <div className="template-meta">
-        <div>
-          <span className="meta-label">Epoch</span>
-          <span className="meta-value">{currentEpoch}</span>
-        </div>
-        <div>
-          <span className="meta-label">Available Points</span>
-          <span className="meta-value">{availablePoints.toString()}</span>
-        </div>
-      </div>
-
-      {error && <div className="notice error">{error}</div>}
-
-      <div className="template-actions">
-        <button onClick={handleStart} disabled={!contractId || !player2}>
-          Start Game
-        </button>
-        <button
-          className="btn-secondary"
-          onClick={handleFinish}
-          disabled={!contractId || status !== 'started'}
-        >
-          Finish Game
-        </button>
-      </div>
-    </div>
-  );
-}
-`;
-
-const gameStyles = `.template-game {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.template-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
-.template-subtitle {
-  color: var(--color-ink-muted);
-  font-size: 0.9rem;
-}
-
-.template-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(0, 167, 181, 0.15);
-  color: var(--color-ink);
-}
-
-.template-status.status-finished {
-  background: rgba(0, 167, 181, 0.25);
-}
-
-.pulse-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--color-teal);
-  box-shadow: 0 0 0 rgba(0, 167, 181, 0.6);
-  animation: pulse 1.6s ease infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.9);
-    box-shadow: 0 0 0 0 rgba(0, 167, 181, 0.5);
-  }
-  70% {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 8px rgba(0, 167, 181, 0);
-  }
-  100% {
-    transform: scale(0.9);
-    box-shadow: 0 0 0 0 rgba(0, 167, 181, 0);
-  }
-}
-
-.template-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.template-grid label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.template-meta {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
-.template-meta div {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  padding: 0.8rem 1rem;
-}
-
-.meta-label {
-  display: block;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-ink-muted);
-  margin-bottom: 0.4rem;
-}
-
-.meta-value {
-  font-weight: 600;
-}
-
-.template-actions {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-`;
-
-const serviceFile = `import { Client as ${pascalName}Client } from './bindings';
-import { NETWORK_PASSPHRASE, RPC_URL, DEFAULT_METHOD_OPTIONS } from '@/utils/constants';
-import { contract } from '@stellar/stellar-sdk';
-
-type ClientOptions = contract.ClientOptions;
-
-/**
- * Service wrapper for ${titleName}
- *
- * For multi-sig start_game flows, see number-guess in the studio frontend.
- */
-export class ${serviceClassName} {
-  private contractId: string;
-  private baseClient: ${pascalName}Client;
-
-  constructor(contractId: string) {
-    this.contractId = contractId;
-    this.baseClient = new ${pascalName}Client({
-      contractId: this.contractId,
-      networkPassphrase: NETWORK_PASSPHRASE,
-      rpcUrl: RPC_URL,
-    });
-  }
-
-  private createSigningClient(
-    publicKey: string,
-    signer: Pick<ClientOptions, 'signTransaction' | 'signAuthEntry'>
-  ) {
-    const options: ClientOptions = {
-      contractId: this.contractId,
-      networkPassphrase: NETWORK_PASSPHRASE,
-      rpcUrl: RPC_URL,
-      publicKey,
-      ...signer,
-    };
-    return new ${pascalName}Client(options);
-  }
-
-  async startGame(
-    sessionId: number,
-    player1: string,
-    player2: string,
-    player1Points: bigint,
-    player2Points: bigint,
-    signer: Pick<ClientOptions, 'signTransaction' | 'signAuthEntry'>
-  ) {
-    const client = this.createSigningClient(player1, signer);
-    const tx: any = await client.start_game(
-      {
-        session_id: sessionId,
-        player1,
-        player2,
-        player1_points: player1Points,
-        player2_points: player2Points,
-      },
-      DEFAULT_METHOD_OPTIONS as any
-    );
-
-    if (tx?.signAndSend) {
-      return tx.signAndSend();
-    }
-
-    return tx;
-  }
-
-  async finishGame(
-    sessionId: number,
-    player: string,
-    player1Won: boolean,
-    signer: Pick<ClientOptions, 'signTransaction' | 'signAuthEntry'>
-  ) {
-    const client = this.createSigningClient(player, signer);
-    const tx: any = await client.finish_game(
-      {
-        session_id: sessionId,
-        player,
-        player1_won: player1Won,
-      },
-      DEFAULT_METHOD_OPTIONS as any
-    );
-
-    if (tx?.signAndSend) {
-      return tx.signAndSend();
-    }
-
-    return tx;
-  }
-}
-`;
-
-const bindingsFile = `export interface ClientOptions {
-  contractId: string;
-  networkPassphrase: string;
-  rpcUrl: string;
-  publicKey?: string;
-}
-
-export interface Game {
-  player1: string;
-  player2: string;
-  player1_points: bigint;
-  player2_points: bigint;
-  winner: string | null;
-}
-
-export class Client {
-  constructor(_options: ClientOptions) {
-  }
-
-  async start_game(_args: Record<string, unknown>, _opts?: Record<string, unknown>) {
-    return {
-      signAndSend: async () => ({ result: undefined }),
-    };
-  }
-
-  async finish_game(_args: Record<string, unknown>, _opts?: Record<string, unknown>) {
-    return {
-      signAndSend: async () => ({ result: undefined }),
-    };
-  }
-
-  async get_game(_args: Record<string, unknown>) {
-    return {
-      simulate: async () => ({ result: { isOk: () => false } }),
-    };
-  }
-}
-`;
-
-writeFileSync(path.join(newGameDir, `${componentName}.tsx`), gameComponent);
-writeFileSync(path.join(newGameDir, `${cssFileBase}.css`), gameStyles);
-writeFileSync(path.join(newGameDir, `${serviceFileBase}.ts`), serviceFile);
-writeFileSync(path.join(newGameDir, 'bindings.ts'), bindingsFile);
+replaceInDir(newGameDir, replacements);
+replaceInFile(path.join(newFrontendDir, 'src', 'utils', 'constants.ts'), replacements);
+replaceInFile(path.join(newFrontendDir, 'src', 'config.ts'), replacements);
 
 const appTemplate = `import { config } from './config';
 import { Layout } from './components/Layout';
@@ -656,9 +306,10 @@ export default function App() {
       ) : (
         <${componentName}
           userAddress={userAddress}
-          contractId={contractId}
           currentEpoch={1}
           availablePoints={1000000000n}
+          onBack={() => {}}
+          onStandingsRefresh={() => {}}
           onGameComplete={() => {}}
         />
       )}
