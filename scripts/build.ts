@@ -8,7 +8,18 @@
  */
 
 import { $ } from "bun";
-import { getWorkspaceContracts } from "./utils/contracts";
+import { getWorkspaceContracts, listContractNames, selectContracts } from "./utils/contracts";
+
+function usage() {
+  console.log(`
+Usage: bun run build [contract-name...]
+
+Examples:
+  bun run build
+  bun run build number-guess
+  bun run build twenty-one number-guess
+`);
+}
 
 console.log("🔨 Building Soroban contracts...\n");
 
@@ -33,9 +44,33 @@ try {
   process.exit(1);
 }
 
-const contracts = await getWorkspaceContracts();
+const args = process.argv.slice(2);
+if (args.includes("--help") || args.includes("-h")) {
+  usage();
+  process.exit(0);
+}
 
-for (const contract of contracts) {
+const contracts = await getWorkspaceContracts();
+const selection = selectContracts(contracts, args);
+if (selection.unknown.length > 0 || selection.ambiguous.length > 0) {
+  console.error("❌ Error: Unknown or ambiguous contract names.");
+  if (selection.unknown.length > 0) {
+    console.error("Unknown:");
+    for (const name of selection.unknown) console.error(`  - ${name}`);
+  }
+  if (selection.ambiguous.length > 0) {
+    console.error("Ambiguous:");
+    for (const entry of selection.ambiguous) {
+      console.error(`  - ${entry.target}: ${entry.matches.join(", ")}`);
+    }
+  }
+  console.error(`\nAvailable contracts: ${listContractNames(contracts)}`);
+  process.exit(1);
+}
+
+const contractsToBuild = selection.contracts;
+
+for (const contract of contractsToBuild) {
   console.log(`Building ${contract.packageName}...`);
   try {
     await $`stellar contract build --manifest-path ${contract.manifestPath}`;
@@ -46,8 +81,8 @@ for (const contract of contracts) {
   }
 }
 
-console.log("🎉 All contracts built successfully!");
+console.log("🎉 Contracts built successfully!");
 console.log("\nWASM files:");
-for (const contract of contracts) {
+for (const contract of contractsToBuild) {
   console.log(`  - ${contract.wasmPath}`);
 }

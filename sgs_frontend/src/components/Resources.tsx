@@ -80,12 +80,12 @@ export function Resources({ onBack }: ResourcesProps) {
           <nav className="sidebar-nav">
             <button
               className="nav-item external"
-              onClick={() => handleExternalLink('https://developers.stellar.org/docs/soroban')}
+              onClick={() => handleExternalLink('https://developers.stellar.org/')}
             >
               <span className="nav-icon" aria-hidden="true">
                 🪐
               </span>
-              <span className="nav-label">Soroban Docs</span>
+              <span className="nav-label">Developer Docs</span>
               <span className="external-icon" aria-hidden="true">
                 <ExternalLink size={16} />
               </span>
@@ -111,7 +111,20 @@ export function Resources({ onBack }: ResourcesProps) {
               <span className="nav-icon" aria-hidden="true">
                 🧰
               </span>
-              <span className="nav-label">Stellar CLI</span>
+              <span className="nav-label">Developer Tools</span>
+              <span className="external-icon" aria-hidden="true">
+                <ExternalLink size={16} />
+              </span>
+            </button>
+
+            <button
+              className="nav-item external"
+              onClick={() => handleExternalLink('https://soropg.com')}
+            >
+              <span className="nav-icon" aria-hidden="true">
+                📝
+              </span>
+              <span className="nav-label">Soroban Playground</span>
               <span className="external-icon" aria-hidden="true">
                 <ExternalLink size={16} />
               </span>
@@ -226,9 +239,9 @@ rustup target add wasm32v1-none`}</code>
           <p>Need to run steps independently? Use the scripts below.</p>
           <div className="code-block">
             <pre>
-              <code>{`bun run build             # Build contracts only
-bun run deploy            # Deploy to testnet
-bun run bindings          # Generate TS bindings
+              <code>{`bun run build [game]       # Build all or one contract
+bun run deploy [game]      # Deploy all or one contract to testnet
+bun run bindings [game]    # Generate TS bindings
 bun run create my-game    # Scaffold contract + standalone frontend
 bun run publish my-game   # Export standalone frontend
 bun run dev               # Start studio frontend dev server`}</code>
@@ -294,8 +307,11 @@ function CreateGameSection() {
         </section>
 
         <section className="content-block">
-          <h2>Step 2: Update the contract manifest</h2>
-          <p>Confirm the package name in <code>contracts/my-game/Cargo.toml</code>.</p>
+          <h2>Step 2: Contract manifest (automatic)</h2>
+          <p>
+            The create script writes the package name in <code>contracts/my-game/Cargo.toml</code>. No
+            manual edits are required unless you want to rename the crate.
+          </p>
           <div className="code-block">
             <pre>
               <code>{`[package]
@@ -315,8 +331,11 @@ soroban-sdk = { workspace = true }`}</code>
         </section>
 
         <section className="content-block">
-          <h2>Step 3: Add the contract to the workspace</h2>
-          <p>The create script updates the root <code>Cargo.toml</code> for you.</p>
+          <h2>Step 3: Workspace registration (automatic)</h2>
+          <p>
+            The create script adds your contract to the root <code>Cargo.toml</code>. No manual edits are
+            required unless you manage the workspace yourself.
+          </p>
           <div className="code-block">
             <pre>
               <code>{`[workspace]
@@ -325,7 +344,7 @@ members = [
   "contracts/mock-game-hub",
   "contracts/twenty-one",
   "contracts/number-guess",
-  "contracts/my-game",  # Add this line
+  "contracts/my-game",
 ]`}</code>
             </pre>
           </div>
@@ -554,9 +573,9 @@ export class ImportedGameService {
             <pre>
               <code>{`bun run setup
 # or individually:
-bun run build
-bun run deploy
-bun run bindings
+bun run build my-game
+bun run deploy my-game
+bun run bindings my-game
 cd sgs_frontend && bun run dev`}</code>
             </pre>
           </div>
@@ -586,7 +605,7 @@ function PublishGameSection() {
           <div className="code-block">
             <pre>
               <code>{`# Build optimized WASM
-bun run build
+bun run build my-game
 
 # Install + deploy on mainnet
 stellar contract install --wasm target/wasm32v1-none/release/my_game.wasm --source <ADMIN> --network mainnet

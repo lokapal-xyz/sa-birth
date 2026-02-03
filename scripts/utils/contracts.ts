@@ -11,6 +11,12 @@ export type ContractInfo = {
   isMockHub: boolean;
 };
 
+export type ContractSelection = {
+  contracts: ContractInfo[];
+  unknown: string[];
+  ambiguous: { target: string; matches: string[] }[];
+};
+
 function toWasmName(packageName: string): string {
   return packageName.replaceAll("-", "_");
 }
@@ -69,4 +75,67 @@ export async function getWorkspaceContracts(): Promise<ContractInfo[]> {
   });
 
   return infos;
+}
+
+function normalizeTarget(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+function contractTargetKeys(contract: ContractInfo): string[] {
+  const memberBase = contract.memberPath.split("/").pop() ?? contract.memberPath;
+  return [
+    contract.packageName,
+    contract.wasmName,
+    contract.memberPath,
+    memberBase,
+  ].map(normalizeTarget);
+}
+
+export function selectContracts(
+  contracts: ContractInfo[],
+  targets: string[],
+): ContractSelection {
+  const normalizedTargets = targets.map(normalizeTarget).filter(Boolean);
+  if (normalizedTargets.length === 0) {
+    return { contracts, unknown: [], ambiguous: [] };
+  }
+
+  const selected = new Map<string, ContractInfo>();
+  const unknown: string[] = [];
+  const ambiguous: { target: string; matches: string[] }[] = [];
+
+  for (const target of normalizedTargets) {
+    const matches = contracts.filter((contract) =>
+      contractTargetKeys(contract).includes(target),
+    );
+
+    if (matches.length === 0) {
+      unknown.push(target);
+      continue;
+    }
+
+    const uniqueMatches = Array.from(
+      new Map(matches.map((contract) => [contract.packageName, contract])).values(),
+    );
+
+    if (uniqueMatches.length > 1) {
+      ambiguous.push({
+        target,
+        matches: uniqueMatches.map((contract) => contract.packageName),
+      });
+      continue;
+    }
+
+    selected.set(uniqueMatches[0].packageName, uniqueMatches[0]);
+  }
+
+  return {
+    contracts: contracts.filter((contract) => selected.has(contract.packageName)),
+    unknown,
+    ambiguous,
+  };
+}
+
+export function listContractNames(contracts: ContractInfo[]): string {
+  return contracts.map((contract) => contract.packageName).join(", ");
 }

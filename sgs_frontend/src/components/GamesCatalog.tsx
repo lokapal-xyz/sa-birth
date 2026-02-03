@@ -33,7 +33,9 @@ const games = [
 export function GamesCatalog() {
   const [selectedGame, setSelectedGame] = useState<string | null>(() => {
     if (typeof window === 'undefined') return null;
-    return window.location.hash === '#docs' ? 'docs' : null;
+    if (window.location.hash === '#docs') return 'docs';
+    if (window.location.hash === '#games') return 'library';
+    return null;
   });
   const { publicKey, isConnected, isConnecting, error } = useWallet();
 
@@ -43,28 +45,90 @@ export function GamesCatalog() {
     setSelectedGame(gameId);
   };
 
-  const handleBackToGames = () => {
+  const handleBackToStudio = () => {
     setSelectedGame(null);
   };
 
-  const scrollToSection = (id: string) => {
-    const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  const handleBackToLibrary = () => {
+    setSelectedGame('library');
   };
 
   useEffect(() => {
     if (selectedGame === 'docs') {
       window.location.hash = 'docs';
-    } else if (window.location.hash === '#docs') {
+      return;
+    }
+    if (selectedGame === 'library') {
+      window.location.hash = 'games';
+      return;
+    }
+    if (window.location.hash === '#docs' || window.location.hash === '#games') {
       const next = `${window.location.pathname}${window.location.search}`;
       window.history.replaceState(null, '', next);
     }
   }, [selectedGame]);
 
   if (selectedGame === 'docs') {
-    return <Resources onBack={handleBackToGames} />;
+    return <Resources onBack={handleBackToStudio} />;
+  }
+
+  if (selectedGame === 'library') {
+    return (
+      <div className="library-page">
+        <div className="library-header">
+          <button className="btn-secondary" onClick={handleBackToStudio}>
+            Back to Studio
+          </button>
+          <div className="library-intro">
+            <h2>Games Library</h2>
+            <p>Choose a template to play now or fork into your own title.</p>
+          </div>
+        </div>
+
+        {!isConnected && (
+          <div className="card wallet-banner">
+            {error ? (
+              <>
+                <h3>Wallet Connection Error</h3>
+                <p>{error}</p>
+              </>
+            ) : (
+              <>
+                <h3>{isConnecting ? 'Connecting…' : 'Connect a Dev Wallet'}</h3>
+                <p>Use the switcher above to auto-connect and swap between demo players.</p>
+              </>
+            )}
+          </div>
+        )}
+
+        <div className="games-grid">
+          {games.map((game, index) => (
+            <button
+              key={game.id}
+              className="game-card"
+              type="button"
+              disabled={!isConnected}
+              onClick={() => handleSelectGame(game.id)}
+              style={{ animationDelay: `${index * 120}ms` }}
+            >
+              <div className="game-card-header">
+                <span className="game-emoji">{game.emoji}</span>
+                <span className="game-title">{game.title}</span>
+              </div>
+              <p className="game-description">{game.description}</p>
+              <div className="game-tags">
+                {game.tags.map((tag) => (
+                  <span key={tag} className="game-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="game-cta">Launch Game</div>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
   }
 
   if (selectedGame === 'twenty-one') {
@@ -73,7 +137,7 @@ export function GamesCatalog() {
         userAddress={userAddress}
         currentEpoch={1}
         availablePoints={1000000000n}
-        onBack={handleBackToGames}
+        onBack={handleBackToLibrary}
         onStandingsRefresh={() => console.log('Refresh standings')}
         onGameComplete={() => console.log('Game complete')}
       />
@@ -86,7 +150,7 @@ export function GamesCatalog() {
         userAddress={userAddress}
         currentEpoch={1}
         availablePoints={1000000000n}
-        onBack={handleBackToGames}
+        onBack={handleBackToLibrary}
         onStandingsRefresh={() => console.log('Refresh standings')}
         onGameComplete={() => console.log('Game complete')}
       />
@@ -99,7 +163,7 @@ export function GamesCatalog() {
         userAddress={userAddress}
         currentEpoch={1}
         availablePoints={1000000000n}
-        onBack={handleBackToGames}
+        onBack={handleBackToLibrary}
         onStandingsRefresh={() => console.log('Refresh standings')}
         onGameComplete={() => console.log('Game complete')}
       />
@@ -116,7 +180,7 @@ export function GamesCatalog() {
             and multi-player flows.
           </p>
           <div className="hero-actions">
-            <button onClick={() => scrollToSection('games')}>Explore Games</button>
+            <button onClick={() => setSelectedGame('library')}>Explore Games</button>
             <button className="btn-secondary" onClick={() => handleSelectGame('docs')}>
               Open Docs
             </button>
@@ -163,39 +227,6 @@ export function GamesCatalog() {
         </div>
       )}
 
-      <section id="games" className="games-section">
-        <div className="section-header">
-          <h3>Game Library</h3>
-          <p>Choose a template to play now or fork into your own title.</p>
-        </div>
-        <div className="games-grid">
-          {games.map((game, index) => (
-            <button
-              key={game.id}
-              className="game-card"
-              type="button"
-              disabled={!isConnected}
-              onClick={() => handleSelectGame(game.id)}
-              style={{ animationDelay: `${index * 120}ms` }}
-            >
-              <div className="game-card-header">
-                <span className="game-emoji">{game.emoji}</span>
-                <span className="game-title">{game.title}</span>
-              </div>
-              <p className="game-description">{game.description}</p>
-              <div className="game-tags">
-                {game.tags.map((tag) => (
-                  <span key={tag} className="game-tag">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="game-cta">Launch Game</div>
-            </button>
-          ))}
-        </div>
-      </section>
-
       <section id="quickstart" className="quickstart-section">
         <div className="section-header">
           <h3>Quickstart</h3>
@@ -213,9 +244,9 @@ export function GamesCatalog() {
             <code>bun run setup</code>
           </div>
           <div className="quickstart-card">
-            <h4>3. Create The Game</h4>
-            <p>Generate a contract + standalone frontend scaffold.</p>
-            <code>bun run create my-game</code>
+            <h4>3. Build The Game</h4>
+            <p>Export a standalone build for your new game.</p>
+            <code>bun run publish my-game</code>
           </div>
         </div>
       </section>
@@ -233,18 +264,18 @@ export function GamesCatalog() {
           </div>
           <div className="command-card">
             <h4>Contracts only</h4>
-            <p>Build all Soroban contracts in the workspace.</p>
-            <code>bun run build</code>
+            <p>Build all Soroban contracts or a single game.</p>
+            <code>bun run build [game]</code>
           </div>
           <div className="command-card">
             <h4>Deploy + IDs</h4>
-            <p>Deploy contracts to testnet and write contract IDs.</p>
-            <code>bun run deploy</code>
+            <p>Deploy contracts to testnet (all or one) and write contract IDs.</p>
+            <code>bun run deploy [game]</code>
           </div>
           <div className="command-card">
             <h4>Generate bindings</h4>
-            <p>Create TypeScript bindings for each contract.</p>
-            <code>bun run bindings</code>
+            <p>Create TypeScript bindings for all or one contract.</p>
+            <code>bun run bindings [game]</code>
           </div>
           <div className="command-card">
             <h4>Create a game</h4>
@@ -276,16 +307,16 @@ export function GamesCatalog() {
         </div>
         <div className="integration-grid">
           <div className="integration-card">
-            <h4>Points orchestration</h4>
-            <p>Lock points at start and unlock on completion with a single call.</p>
+            <h4>Reusable Templates</h4>
+            <p>Ship faster with pre-built game contract and frontend templates & examples.</p>
           </div>
           <div className="integration-card">
-            <h4>Deterministic outcomes</h4>
-            <p>Ship predictable simulations and reliable on-chain submissions.</p>
+            <h4>Ecosystem Ready</h4>
+            <p>Ensure your game is compatible with the emerging Stellar gaming ecosystem.</p>
           </div>
           <div className="integration-card">
-            <h4>Reusable templates</h4>
-            <p>Start from proven game loops and customize fast.</p>
+            <h4>Zero Knowledge</h4>
+            <p>Use Stellar's latest zk integrations to build games with RiscZERO & Noir technology.</p>
           </div>
         </div>
       </section>

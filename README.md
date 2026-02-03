@@ -36,9 +36,9 @@ Your dev server will start at http://localhost:3000
 
 ```bash
 bun run setup      # Full setup (build + deploy + configure + start)
-bun run build      # Build contracts only
-bun run deploy     # Deploy to testnet only
-bun run bindings   # Generate TypeScript bindings only
+bun run build [contract-name...]    # Build all or selected contracts
+bun run deploy [contract-name...]   # Deploy all or selected contracts to testnet
+bun run bindings [contract-name...] # Generate bindings for all or selected contracts
 bun run create my-game  # Scaffold contract + standalone frontend
 bun run publish my-game # Export standalone frontend
 
@@ -72,8 +72,8 @@ bun run create my-game
 ```
 If `my-game-frontend/` or `contracts/my-game/` already exist, use `--force` to overwrite.
 
-### Step 2: Update the Contract Manifest
-Edit `contracts/my-game/Cargo.toml`:
+### Step 2: Contract Manifest (Automatic)
+The create script writes the package name in `contracts/my-game/Cargo.toml`. No manual edits are required unless you want to rename the crate.
 ```toml
 [package]
 name = "my-game"
@@ -89,8 +89,8 @@ doctest = false
 soroban-sdk = { workspace = true }
 ```
 
-### Step 3: Add the Contract to the Workspace
-The create script updates the root `Cargo.toml` for you:
+### Step 3: Workspace Registration (Automatic)
+The create script adds your contract to the root `Cargo.toml`. No manual edits are required unless you manage the workspace yourself:
 ```toml
 [workspace]
 resolver = "2"
@@ -98,7 +98,7 @@ members = [
   "contracts/mock-game-hub",
   "contracts/twenty-one",
   "contracts/number-guess",
-  "contracts/my-game", # Add this line
+  "contracts/my-game",
 ]
 ```
 
@@ -265,9 +265,9 @@ Update `sgs_frontend/src/components/GamesCatalog.tsx` (import, routing, and card
 ```bash
 bun run setup
 # or run steps individually:
-bun run build
-bun run deploy
-bun run bindings
+bun run build my-game
+bun run deploy my-game
+bun run bindings my-game
 cd sgs_frontend && bun run dev
 ```
 
@@ -281,7 +281,7 @@ Game Hub does not host third-party games. To publish your game in production, yo
 ### Step 1: Deploy Contract to Mainnet
 ```bash
 # Build optimized WASM
-bun run build
+bun run build my-game
 
 # Install + deploy on mainnet
 stellar contract install --wasm target/wasm32v1-none/release/my_game.wasm --source <ADMIN> --network mainnet

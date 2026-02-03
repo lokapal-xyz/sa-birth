@@ -85,14 +85,18 @@ This repo is the Stellar Game Studio. Use this guide when creating new games.
   `<game-name>-frontend/src/games/<game-name>/bindings.ts` (and optionally into `sgs_frontend/src/games/<game-name>/bindings.ts`).
 
 ## Deployment / Local Testing
-- Build all contracts:
+- Build contracts (all or individual):
   ```bash
   bun run build
+  bun run build <game-name>
   ```
 - Deploy to testnet and generate bindings:
   ```bash
   bun run deploy
   bun run bindings
+  # Or target a single game:
+  bun run deploy <game-name>
+  bun run bindings <game-name>
   ```
 - Start the studio frontend:
   ```bash

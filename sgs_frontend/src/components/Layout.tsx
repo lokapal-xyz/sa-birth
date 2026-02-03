@@ -28,7 +28,7 @@ export function Layout({ children }: LayoutProps) {
       <main className="studio-main">{children}</main>
 
       <footer className="studio-footer">
-        <span>Built with ♥️for Stellar Developers</span>
+        <span>Built with ♥️ for Stellar Developers</span>
       </footer>
     </div>
   );

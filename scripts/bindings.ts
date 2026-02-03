@@ -9,11 +9,46 @@
 import { $ } from "bun";
 import { existsSync } from "fs";
 import { readEnvFile, getEnvValue } from "./utils/env";
-import { getWorkspaceContracts } from "./utils/contracts";
+import { getWorkspaceContracts, listContractNames, selectContracts } from "./utils/contracts";
+
+function usage() {
+  console.log(`
+Usage: bun run bindings [contract-name...]
+
+Examples:
+  bun run bindings
+  bun run bindings number-guess
+  bun run bindings twenty-one number-guess
+`);
+}
 
 console.log("📦 Generating TypeScript bindings...\n");
 
+const args = process.argv.slice(2);
+if (args.includes("--help") || args.includes("-h")) {
+  usage();
+  process.exit(0);
+}
+
 const contracts = await getWorkspaceContracts();
+const selection = selectContracts(contracts, args);
+if (selection.unknown.length > 0 || selection.ambiguous.length > 0) {
+  console.error("❌ Error: Unknown or ambiguous contract names.");
+  if (selection.unknown.length > 0) {
+    console.error("Unknown:");
+    for (const name of selection.unknown) console.error(`  - ${name}`);
+  }
+  if (selection.ambiguous.length > 0) {
+    console.error("Ambiguous:");
+    for (const entry of selection.ambiguous) {
+      console.error(`  - ${entry.target}: ${entry.matches.join(", ")}`);
+    }
+  }
+  console.error(`\nAvailable contracts: ${listContractNames(contracts)}`);
+  process.exit(1);
+}
+
+const contractsToBind = selection.contracts;
 const contractIds: Record<string, string> = {};
 
 if (existsSync("deployment.json")) {
@@ -34,7 +69,7 @@ if (existsSync("deployment.json")) {
 }
 
 const missing: string[] = [];
-for (const contract of contracts) {
+for (const contract of contractsToBind) {
   const id = contractIds[contract.packageName];
   if (!id) missing.push(`VITE_${contract.envKey}_CONTRACT_ID`);
 }
@@ -45,7 +80,7 @@ if (missing.length > 0) {
   process.exit(1);
 }
 
-for (const contract of contracts) {
+for (const contract of contractsToBind) {
   const contractId = contractIds[contract.packageName];
   console.log(`Generating bindings for ${contract.packageName}...`);
   try {
@@ -59,6 +94,6 @@ for (const contract of contracts) {
 
 console.log("🎉 Bindings generated successfully!");
 console.log("\nGenerated files:");
-for (const contract of contracts) {
+for (const contract of contractsToBind) {
   console.log(`  - ${contract.bindingsOutDir}/`);
 }

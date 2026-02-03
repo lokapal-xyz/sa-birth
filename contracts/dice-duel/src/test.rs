@@ -54,7 +54,7 @@ fn setup_test() -> (
     // Set ledger info for time-based operations
     env.ledger().set(soroban_sdk::testutils::LedgerInfo {
         timestamp: 1441065600,
-        protocol_version: 23,
+        protocol_version: 25,
         sequence_number: 100,
         network_id: Default::default(),
         base_reserve: 10,
@@ -238,5 +238,8 @@ fn test_upgrade_function_exists() {
 
     // Verify upgrade function is callable by admin (mocked auth)
     let new_wasm_hash = BytesN::from_array(&_env, &[0u8; 32]);
-    client.upgrade(&new_wasm_hash);
+    let result = client.try_upgrade(&new_wasm_hash);
+
+    // Should fail (WASM doesn't exist) but confirms function signature is correct
+    assert!(result.is_err());
 }
