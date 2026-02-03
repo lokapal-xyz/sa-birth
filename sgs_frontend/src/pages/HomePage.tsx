@@ -25,28 +25,27 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <button type="button" className="btn-secondary" onClick={() => onNavigate('docs')}>
               Open Docs
             </button>
-          </div>
-          <div className="hero-metrics">
-            <div>
-              <span className="metric-label">Games</span>
-              <span className="metric-value">3 templates</span>
-            </div>
-            <div>
-              <span className="metric-label">Network</span>
-              <span className="metric-value">Stellar testnet</span>
-            </div>
-            <div>
-              <span className="metric-label">Hooks</span>
-              <span className="metric-value">start_game / end_game</span>
-            </div>
+            <a
+              className="button btn-secondary"
+              href="https://github.com/jamesbachini/Stellar-Game-Studio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Fork on GitHub
+            </a>
           </div>
         </div>
         <div className="hero-panel">
-          <div className="panel-title">Integration Snapshot</div>
+          <div className="panel-title">Dev-to-Publish Pipeline</div>
+          <ol className="panel-steps">
+            <li>Fork and clone the repo</li>
+            <li>Deploy contracts to testnet</li>
+            <li>Build the standalone game frontend</li>
+            <li>Publish with a production wallet flow</li>
+          </ol>
           <pre>
-            <code>{`game_hub.start_game(\n  game_id,\n  session_id,\n  player1,\n  player2,\n  player1_points,\n  player2_points,\n);`}</code>
+            <code>{`bun run setup\nbun run create my-game\nbun run dev:game my-game\nbun run publish my-game --build`}</code>
           </pre>
-          <div className="panel-footer">Use the shared Game Hub contract for points orchestration.</div>
         </div>
       </section>
 

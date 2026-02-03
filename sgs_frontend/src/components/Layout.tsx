@@ -52,14 +52,6 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
         <div className="header-actions">
           <div className="network-pill">Testnet</div>
           <WalletSwitcher />
-          <a
-            className="button primary small"
-            href="https://github.com/jamesbachini/Stellar-Game-Studio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Fork on GitHub
-          </a>
         </div>
       </header>
 
