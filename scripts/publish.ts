@@ -75,6 +75,27 @@ function copyDir(src: string, dest: string) {
   }
 }
 
+function normalizeBuildScripts(frontendDir: string) {
+  const packagePath = path.join(frontendDir, 'package.json');
+  if (!existsSync(packagePath)) return;
+
+  const pkg = JSON.parse(readFileSync(packagePath, 'utf8')) as {
+    scripts?: Record<string, string>;
+  };
+
+  if (!pkg.scripts) {
+    pkg.scripts = {};
+  }
+
+  // Published frontends should always build into local dist/ with no docs base path.
+  pkg.scripts.build = 'tsc -b && vite build';
+  if (pkg.scripts['build:docs']) {
+    delete pkg.scripts['build:docs'];
+  }
+
+  writeFileSync(packagePath, JSON.stringify(pkg, null, 2) + '\n');
+}
+
 const args = process.argv.slice(2);
 if (args.length === 0 || args.includes('--help')) {
   usage();
@@ -134,6 +155,7 @@ if (existsSync(outputDir)) {
 
 console.log(`\n📦 Publishing ${gameSlug}...`);
 copyDir(sourceDir, outputDir);
+normalizeBuildScripts(outputDir);
 
 const { fileBase, component: componentName, isDefault } = findGameComponent(gameDir);
 const title = titleCaseFromSlug(gameSlug);

@@ -5,7 +5,7 @@ import { NumberGuessGame } from './games/number-guess/NumberGuessGame';
 
 const GAME_ID = 'number-guess';
 const GAME_TITLE = import.meta.env.VITE_GAME_TITLE || 'Number Guess';
-const GAME_TAGLINE = import.meta.env.VITE_GAME_TAGLINE || 'On-chain game on Stellar';
+const GAME_TAGLINE = import.meta.env.VITE_GAME_TAGLINE || 'Web3 Gaming On Stellar';
 
 export default function App() {
   const { publicKey, isConnected, isConnecting, error, isDevModeAvailable } = useWallet();

@@ -35,7 +35,7 @@ export function Layout({ title, subtitle, children }: LayoutProps) {
       <main className="studio-main">{children}</main>
 
       <footer className="studio-footer">
-        <span>Built for Stellar game developers.</span>
+        <span>Built with the Stellar Game Studio</span>
       </footer>
     </div>
   );
