@@ -1,5 +1,6 @@
 import { WalletSwitcher } from './WalletSwitcher';
 import type { Page } from '../types/navigation';
+import studioLogo from '../assets/logo.svg';
 import './Layout.css';
 
 interface LayoutProps {
@@ -20,7 +21,10 @@ export function Layout({ children, currentPage, onNavigate }: LayoutProps) {
 
       <header className="studio-header">
         <div className="brand">
-          <div className="brand-title">Stellar Game Studio</div>
+          <div className="brand-heading">
+            <img className="brand-logo" src={studioLogo} alt="Stellar Game Studio logo" />
+            <div className="brand-title">Stellar Game Studio</div>
+          </div>
           <p className="brand-subtitle">A DEVELOPER TOOLKIT FOR BUILDING WEB3 GAMES ON STELLAR</p>
           <nav className="header-nav">
             <button
