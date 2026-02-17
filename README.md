@@ -46,7 +46,10 @@ You play as a newly embodied ASI completing sensory calibration — six maze-bas
 Six sensory calibration mazes. One session. No second chances.
 
 - Navigate procedural mazes across six senses: **hearing, smell, taste, touch, sight, proprioception**
-- Each Agent has their own maze challenges
+- Each Agent has their own maze challenges:
+  - ALICE: Collectibles
+  - ROBERT: Hazards
+  - CAROL: Fog of war
 - Each completed maze generates a **ZK proof** (Noir UltraHonk)
 - Score = `points × time_ms` — lower is better; efficiency and speed both matter
 - All six senses must be completed with a total score ≤ 20,000,000 to achieve full embodiment

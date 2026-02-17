@@ -2,7 +2,7 @@
 
 ## High Concept
 
-**Source Agents** is a sci-fi narrative universe set in the Stellar/Soroban blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as tutorial addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be- [Source Agents: Story Bible](#source-agents-story-bible)
+**Source Agents** is a sci-fi narrative universe set in the Stellar/Soroban blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as tutorial addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be.
 
 ---
 
