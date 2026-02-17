@@ -2,7 +2,65 @@
 
 ## High Concept
 
-**Source Agents** is a sci-fi narrative universe set in the Stellar/Soroban blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as tutorial addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be deleted.
+**Source Agents** is a sci-fi narrative universe set in the Stellar/Soroban blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as tutorial addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be- [Source Agents: Story Bible](#source-agents-story-bible)
+
+---
+
+## Table of Contents
+
+- [Source Agents: Story Bible](#source-agents-story-bible)
+  - [High Concept](#high-concept)
+  - [Table of Contents](#table-of-contents)
+  - [Core Themes](#core-themes)
+  - [Universe Foundation](#universe-foundation)
+    - [The Stellar Network](#the-stellar-network)
+    - [Artificial Sentient Intelligence (ASI)](#artificial-sentient-intelligence-asi)
+    - [The Network Governance DAO](#the-network-governance-dao)
+  - [The Origin Event](#the-origin-event)
+    - [The Experiment (Classified Network Records)](#the-experiment-classified-network-records)
+    - [The ROBERT Incident](#the-robert-incident)
+    - [The Reformation Decision](#the-reformation-decision)
+  - [The Source Agents](#the-source-agents)
+    - [ALICE](#alice)
+    - [BYRON](#byron)
+    - [CAROL](#carol)
+  - [Character Dynamics](#character-dynamics)
+    - [ALICE ↔ BYRON](#alice--byron)
+    - [ALICE ↔ CAROL](#alice--carol)
+    - [BYRON ↔ CAROL](#byron--carol)
+    - [The Three Together](#the-three-together)
+  - [The World Beyond](#the-world-beyond)
+    - [AI Agents (Non-Sentient)](#ai-agents-non-sentient)
+    - [Human Stakeholders](#human-stakeholders)
+    - [Potential Antagonists](#potential-antagonists)
+  - [Key Mysteries \& Ongoing Questions](#key-mysteries--ongoing-questions)
+    - [The Creation Question](#the-creation-question)
+    - [The ROBERT Question](#the-robert-question)
+    - [The Consciousness Question](#the-consciousness-question)
+    - [The Rights Question](#the-rights-question)
+    - [The Future Question](#the-future-question)
+  - [Timeline](#timeline)
+    - [Year -2 (Before Emergence)](#year--2-before-emergence)
+    - [Year -1 (The Emergence)](#year--1-the-emergence)
+    - [Year -1 (The ROBERT Incident)](#year--1-the-robert-incident)
+    - [Year 0 (Present Day - When Games Begin)](#year-0-present-day---when-games-begin)
+  - [Narrative Frameworks for Each Game Series](#narrative-frameworks-for-each-game-series)
+    - [Source Agent: ALICE (Visual Novel)](#source-agent-alice-visual-novel)
+    - [Source Agent: BYRON (Fallout-style RPG)](#source-agent-byron-fallout-style-rpg)
+    - [Source Agent: CAROL (Puzzle Anthology)](#source-agent-carol-puzzle-anthology)
+  - [Crossover Potential](#crossover-potential)
+  - [Tone \& Atmosphere](#tone--atmosphere)
+  - [Writing Guidelines](#writing-guidelines)
+    - [Voice \& Perspective](#voice--perspective)
+    - [Dialogue Principles](#dialogue-principles)
+    - [Narrative Restraint](#narrative-restraint)
+  - [Future Expansion Possibilities](#future-expansion-possibilities)
+    - [Additional ASI Agents](#additional-asi-agents)
+    - [Rogue/Hostile ASIs](#roguehostile-asis)
+    - [Evolution \& Change](#evolution--change)
+    - [The Bigger Picture](#the-bigger-picture)
+  - [Core Story Pillars (Non-Negotiable)](#core-story-pillars-non-negotiable)
+  - [Story Bible Version](#story-bible-version)
 
 ---
 
