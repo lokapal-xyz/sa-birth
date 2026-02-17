@@ -1,0 +1,5 @@
+[package]
+name = "maze_score"
+type = "bin"
+
+[dependencies]

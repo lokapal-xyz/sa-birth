@@ -1,0 +1,439 @@
+/**
+ * animations.css
+ * 
+ * Cyberpunk-themed CSS animations for SA:BIRTH
+ * All animations are GPU-accelerated and safe (can't crash UI)
+ */
+
+/* ═════════════════════════════════════════════════════════════════════════
+   SCREEN TRANSITIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply to screen containers */
+.screen-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.screen-transition-slide {
+  animation: slideInUp 0.4s ease-out;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   GLOW EFFECTS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes glowPulseGreen {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.6);
+  }
+}
+
+@keyframes glowPulseRed {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.6);
+  }
+}
+
+/* Apply to buttons, cards */
+.glow-pulse-blue {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.glow-pulse-green {
+  animation: glowPulseGreen 2s ease-in-out infinite;
+}
+
+.glow-pulse-red {
+  animation: glowPulseRed 2s ease-in-out infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   PROGRESS BARS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+}
+
+@keyframes progressPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.progress-fill {
+  animation: progressFill 0.8s ease-out;
+}
+
+.progress-pulse {
+  animation: progressPulse 1.5s ease-in-out infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   BUTTON INTERACTIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Interactive button class */
+.btn-interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-interactive:active {
+  animation: buttonPress 0.15s ease-out;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   LOADING STATES
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
+
+@keyframes scanning {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.loading-spin {
+  animation: spin 1s linear infinite;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   ICON ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes iconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.icon-bounce {
+  animation: iconBounce 0.6s ease-in-out;
+}
+
+.icon-spin {
+  animation: iconSpin 2s linear infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   SENSE DOOR ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes doorUnlock {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.door-unlock {
+  animation: doorUnlock 0.5s ease-out;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   MAZE ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes playerPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes goalShimmer {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.maze-player {
+  animation: playerPulse 1.5s ease-in-out infinite;
+}
+
+.maze-goal {
+  animation: goalShimmer 2s ease-in-out infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   TEXT EFFECTS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes textGlitch {
+  0%, 90%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    transform: translate(2px, -1px);
+  }
+  60% {
+    transform: translate(-1px, 2px);
+  }
+  80% {
+    transform: translate(1px, -2px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.text-glitch {
+  animation: textGlitch 0.5s ease-in-out;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   COUNTDOWN ANIMATIONS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes countdownPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-pulse {
+  animation: countdownPulse 1s ease-in-out infinite;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   MODAL OVERLAYS
+   ═════════════════════════════════════════════════════════════════════════ */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-overlay {
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* ═════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═════════════════════════════════════════════════════════════════════════ */
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hover lift effect for interactive elements */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s ease;
+}
+
+.transition-colors {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-transform {
+  transition: transform 0.2s ease;
+}

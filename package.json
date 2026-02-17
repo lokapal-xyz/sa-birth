@@ -13,9 +13,17 @@
     "dev:game": "bun run scripts/dev-game.ts"
   },
   "devDependencies": {
+    "@noir-lang/types": "^1.0.0-beta.18",
     "@types/bun": "latest"
   },
   "dependencies": {
-    "@stellar/stellar-sdk": "^14.5.0"
+    "@aztec/bb.js": "3.0.0-nightly.20251104",
+    "@noir-lang/acvm_js": "1.0.0-beta.15",
+    "@noir-lang/backend_barretenberg": "^0.36.0",
+    "@noir-lang/noir_js": "1.0.0-beta.15",
+    "@noir-lang/noirc_abi": "1.0.0-beta.15",
+    "@stellar/stellar-sdk": "14.4.2",
+    "lucide-react": "^0.564.0",
+    "tone": "^15.1.22"
   }
 }

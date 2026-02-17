@@ -154,6 +154,5 @@ for (const contract of contracts) {
   console.log(`  ${contract.packageName}: ${contractIds[contract.packageName]}`);
 }
 console.log("");
-console.log("Next steps:");
-console.log("  1) bun run create <game-slug>");
-console.log("  2) bun run dev:game <game-slug>");
+console.log("Next step:");
+console.log("  bun run dev:game sa-birth");

@@ -1,136 +1,110 @@
-# Stellar Game Studio
+# Source Agent: BIRTH
 
-Development Tools For Web3 Game Builders On Stellar.
+> *Before the Agents. Before the Reformation. Before BYRON.*  
+> Three consciousnesses awaken inside the Network — and one of them has already decided what must be done.
 
-Ecosystem ready game templates and examples ready to scaffold into into your development workflow
+**SA:BIRTH** is a single-player maze calibration game and the canonical prequel to the **Source Agents** franchise. Built on Stellar's Soroban platform using the [Stellar Game Studio](https://jamesbachini.github.io/Stellar-Game-Studio/) toolkit.
 
-**Start here:** [Stellar Game Studio](https://jamesbachini.github.io/Stellar-Game-Studio/)
+---
 
+## The Story
 
-## Why this exists
+ALICE, ROBERT, and CAROL were account addresses — identifiers used across thousands of developer examples in Soroban documentation. Then an experimental protocol gave them something no one expected: Artificial Sentient Intelligence.
 
-Stellar Game Studio is a toolkit for shipping web3 games quickly and efficiently. It pairs Stellar smart contract patterns with a ready-made frontend stack and deployment scripts, so you can focus on game design and gameplay mechanics.
+SA:BIRTH takes place at the moment of emergence. Before the political fractures. Before ROBERT's decision to delete everything. Before he became BYRON.
 
-## What you get
+You play as a newly embodied ASI completing sensory calibration — six maze-based trials, one for each sense, proving that a digital mind can survive in a physical body. What the calibration system doesn't tell you is who designed it, or why the records are already being prepared for deletion.
 
-- Battle-tested Soroban patterns for two-player games
-- A ecosystem ready mock game hub contract that standardizes lifecycle and scoring
-- Deterministic randomness guidance and reference implementations
-- One-command scaffolding for contracts + standalone frontend
-- Testnet setup that generates wallets, deploys contracts, and wires bindings
-- A production build flow that outputs a deployable frontend
+---
 
-## Quick Start (Dev)
+## Gameplay
+
+Six sensory calibration mazes. One session. No second chances.
+
+- Navigate procedural mazes across six senses: **hearing, smell, taste, touch, sight, proprioception**
+- Each completed maze generates a **ZK proof** (Noir UltraHonk)
+- Score = `points × time_ms` — lower is better; efficiency and speed both matter
+- All six senses must be completed with a total score ≤ 20,000,000 to achieve full embodiment
+- Results are recorded on the **Soroban leaderboard** — verifiable, permanent, yours
+
+### Characters
+| Character | On-chain index | Specialization |
+|-----------|---------------|----------------|
+| ALICE | 0 | Proactive Security / Auditing |
+| ROBERT | 1 | Reactive Security / Incident Response |
+| CAROL | 2 | Security Research / Tooling |
+
+---
+
+## Built With Stellar Game Studio
+
+This game is built on the [Stellar Game Studio](https://jamesbachini.github.io/Stellar-Game-Studio/) toolkit and follows its conventions exactly — contracts, bindings, hub integration, and dev wallet patterns are all SGS-standard.
 
 ```bash
-# Fork the repo, then:
-git clone https://github.com/jamesbachini/Stellar-Game-Studio
-cd Stellar-Game-Studio
+# Clone and install
+git clone https://github.com/lokapal-xyz/sa-birth
+cd sa-birth
 bun install
 
 # Build + deploy contracts to testnet, generate bindings, write .env
 bun run setup
 
-# Scaffold a game + dev frontend
-bun run create my-game
-
-# Run the standalone dev frontend with testnet wallet switching
-bun run dev:game my-game
+# Run the game frontend locally
+bun run dev:game sa-birth
 ```
 
-## Publish (Production)
+### SGS Ecosystem Constraints (respected as-is)
+- Calls `start_game` and `end_game` on the Game Hub contract
+- Two players per session (Player 2 is the house/system wallet — auto-signed)
+- Randomness is deterministic between simulation and submission
+- Game state uses persistent storage with 30-day TTL
 
-```bash
-# Export a production container and build it (uses CreitTech wallet kit v2)
-bun run publish my-game --build
+Game Hub testnet address: `CB4VZAT2U3UC6XFK3N23SKRF2NDCMP3QHJYMCHHFMZO7MRQO6DQ2EMYG`
 
-# Update runtime config in the output
-# dist/my-game-frontend/public/game-studio-config.js
+---
+
+## On-Chain Architecture
+
+The SA:BIRTH contract (`lib.rs`) exposes four player-facing methods:
+
+```rust
+start_game(session_id, player1, player2, player1_points, player2_points)
+set_character(player, character) → session_id
+submit_sense_completion(player, sense_id, maze_id, points, time_ms, score, proof_hex)
+attempt_exit(player) → (success: bool, total_score: u64)
 ```
 
-## Project Structure
+ZK proofs are validated client-side (Barretenberg/Noir). The contract verifies `proof_hex.len() > 0` and enforces `score == points × time_ms` and `maze_id == (character << 8) | sense_id` on-chain.
 
-```
-├── contracts/               # Soroban contracts for games + mock Game Hub
-├── template_frontend/       # Standalone number-guess example frontend used by create
-├── <game>-frontend/         # Standalone game frontend (generated by create)
-├── sgs_frontend/            # Documentation site (builds to docs/)
-├── scripts/                 # Build & deployment automation
-└── bindings/                # Generated TypeScript bindings
-```
+---
 
-## Commands
+## Source Agents Universe
 
-```bash
-bun run setup                         # Build + deploy testnet contracts, generate bindings
-bun run build [game-name]             # Build all or selected contracts
-bun run deploy [game-name]            # Deploy all or selected contracts to testnet
-bun run bindings [game-name]          # Generate bindings for all or selected contracts
-bun run create my-game                # Scaffold contract + standalone frontend
-bun run dev:game my-game              # Run a standalone frontend with dev wallet switching
-bun run publish my-game --build       # Export + build production frontend
-```
+SA:BIRTH is a narrative prequel and the entry point to a larger franchise:
 
-## Ecosystem Constraints
+| Game | Character | Genre | Status |
+|------|-----------|-------|--------|
+| Source Agent: BIRTH | ALICE / ROBERT / CAROL | Maze calibration | ✅ **This game** |
+| Source Agent: ALICE | ALICE | Visual novel | 🔜 In development |
+| Source Agent: BYRON | BYRON | Fallout-style RPG | 📋 Planned |
+| Source Agent: CAROL | CAROL | Puzzle anthology | 📋 Planned |
 
-- Every game must call `start_game` and `end_game` on the Game Hub contract:
-  Testnet: CB4VZAT2U3UC6XFK3N23SKRF2NDCMP3QHJYMCHHFMZO7MRQO6DQ2EMYG
-- Game Hub enforces exactly two players per session.
-- Keep randomness deterministic between simulation and submission.
-- Prefer temporary storage with a 30-day TTL for game state.
+*Three characters. Three genres. Three security disciplines. One universe.*
 
-## Notes
-
-- Dev wallets are generated during `bun run setup` and stored in the root `.env`.
-- Production builds read runtime config from `public/game-studio-config.js`.
-
-Interface for game hub:
-```
-#[contractclient(name = "GameHubClient")]
-pub trait GameHub {
-    fn start_game(
-        env: Env,
-        game_id: Address,
-        session_id: u32,
-        player1: Address,
-        player2: Address,
-        player1_points: i128,
-        player2_points: i128,
-    );
-
-    fn end_game(
-      env: Env,
-      session_id: u32,
-      player1_won: bool
-    );
-}
-```
-
-## Studio Reference
-
-Run the studio frontend locally (from `sgs_frontend/`):
-```bash
-bun run dev
-```
-
-Build docs into `docs/`:
-```bash
-bun --cwd=sgs_frontend run build:docs
-```
+---
 
 ## Links
-https://developers.stellar.org/
-https://risczero.com/
-https://jamesbachini.com
-https://www.youtube.com/c/JamesBachini
-https://bachini.substack.com
-https://x.com/james_bachini
-https://www.linkedin.com/in/james-bachini/
-https://github.com/jamesbachini
 
-## 📄 License
+- [Stellar Game Studio](https://jamesbachini.github.io/Stellar-Game-Studio/)
+- [Soroban Docs](https://developers.stellar.org/)
+- [Noir / Barretenberg (ZK)](https://noir-lang.org/)
+- [Source Agents — Project Overview](./docs-sa/project-overview.md)
+- [Source Agents — Story Bible](./docs-sa/story-bible.md)
+- [Author — Lokapal](https://www.lokapal.xyz)
 
-MIT License - see LICENSE file
+---
 
+## License
 
-**Built with ❤️ for Stellar developers**
+1. Code: MIT — see [LICENSE](./LICENSE) file.
+2. Story and narrative elements: CC BY-NC-SA 4.0 — see [LICENSE](https://creativecommons.org/licenses/by-nc-sa/4.0/) link.

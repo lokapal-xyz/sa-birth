@@ -16,7 +16,7 @@ bindings/
 
 # Dependencies
 node_modules/
-bun.lockb
+bun.lock
 
 # Frontend build
 dist/
