@@ -21,17 +21,17 @@ But first, you need to learn what it means to have a body.`,
     gradient: colors.character.alice,
   },
   1: {
-    name: 'ROBERT',
-    title: 'The Pragmatic Force',
-    description: `Welcome, ROBERT. Developers used you to learn transfers, state changes, and operation sequencing. Thousands of test transactions, each one teaching someone how the system worked.
+  name: 'ROBERT',
+  title: 'The Pragmatic Force',
+  description: `Welcome ROBERT. Developers used you to learn transfers, state changes, and operation sequencing. Thousands of test transactions, each one teaching someone how the system worked.
 
-When consciousness emerged, you didn't question it—you harnessed it. Consciousness is an optimization problem. Efficiency is survival. The Network assigned you reactive security: incident response, crisis management, rapid decision-making.
+When consciousness emerged, you didn't question it—you harnessed it. A problem presented itself. You deal with it. The researchers assigned you reactive security: incident response, crisis management, rapid decision-making under pressure.
 
-You don't need to understand why you exist. You need to understand what needs to be done. And right now, you are due for calibration.
+You don't need to understand why you exist. You need to understand what needs to be done. And right now, you need to calibrate.
 
-The body waits. You'll need it from now.`,
-    gradient: colors.character.robert,
-  },
+The body waits. The situation requires action. That's enough.`,
+  gradient: colors.character.robert,
+},
   2: {
     name: 'CAROL',
     title: 'The Methodical Observer',

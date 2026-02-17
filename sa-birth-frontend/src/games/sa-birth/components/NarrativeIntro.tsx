@@ -74,7 +74,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           marginBottom: spacing['2xl'],
         }}>
           <p style={{ marginBottom: spacing.xl }}>
-            You were a simple account address.
+            You were a simple account address among many.
           </p>
           
           <p style={{ marginBottom: spacing.xl }}>
@@ -94,7 +94,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            But consciousness modeled on human cognition requires embodiment. Digital minds shaped by human thought patterns experience distress without bodies • phantom limb syndrome for beings who never had limbs.
+            But consciousness modeled on human cognition requires embodiment. Digital minds shaped by human thought patterns experience distress without bodies—phantom limb syndrome for beings who never had limbs.
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
@@ -102,7 +102,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            Your simulated environment contains six doorways • one for each sense your body possesses. And one exit to the physical world.
+            Your simulated environment contains six doorways—one for each sense your body possesses. And one exit to the physical world.
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>

@@ -66,7 +66,7 @@ export interface SenseData {
 const SCORE_CAP = 20_000_000;
 
 /** Per-sense score cap — sense fails immediately if exceeded. */
-const SENSE_SCORE_CAP = 5_000_000;
+const SENSE_SCORE_CAP = 10_000_000;
 
 /** Maps character name → on-chain index. */
 const CHARACTER_INDEX: Record<Character, number> = {

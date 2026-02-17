@@ -132,7 +132,7 @@ export function SuccessScreen({ character, totalScore, senseData, onRestart, onR
             fontSize: typography.size.sm,
           }}>
             <p style={{ margin: 0, color: colors.state.success }}>
-              SYSTEM: "All sensory protocols complete. Neural integration stable.
+              NETWORK: "All sensory protocols complete. Neural integration stable.
             </p>
             <p style={{ margin: `${spacing.sm} 0 0 0`, color: colors.state.success }}>
               Initiating consciousness transfer to physical substrate.
@@ -159,11 +159,11 @@ export function SuccessScreen({ character, totalScore, senseData, onRestart, onR
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            Someone speaks: "Integration successful. Agent {character}, can you confirm awareness?"
+            Someone speaks: "The integration was successful. Agent {character}, can you confirm awareness?"
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            You open your mouth. Air moves across vocal cords. Sound emerges. Your voice.
+            You open your mouth. Air moves across vocal cords. Sound emerges. It's your own voice.
           </p>
 
           <p style={{ marginBottom: 0 }}>

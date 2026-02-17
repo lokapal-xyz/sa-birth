@@ -130,7 +130,7 @@ Close your eyes. Your body doesn't disappear. Hand here, foot there, head tilted
 
 You move your arm. You think "reach" and the body translates intention into movement. Different languages, somehow communicating. Integration progressing.`,
 
-    ROBERT: `Proprioception complete. Body configuration known at all times. Eyes closed, lights off—doesn't matter.
+    ROBERT: `Proprioception completed. Body configuration known at all times. Eyes closed, lights off—doesn't matter.
 
 Spatial self-awareness operational. Can move through environments efficiently. Know exact position in space at all times.
 
