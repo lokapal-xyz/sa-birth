@@ -2,6 +2,7 @@ import type { Character, Sense } from '../SaBirthGame';
 import { colors, typography, spacing, borderRadius, GradientText } from '../../../design-system';
 import { Ear, Flower2, Apple, Hand, Eye, Brain, DoorClosed, DoorOpen } from 'lucide-react';
 import { useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
 
 interface SenseData {
   score: number;
@@ -91,8 +92,23 @@ export function HubRoom({
         borderRadius: borderRadius.lg,
         padding: spacing['3xl'],
         boxShadow: `0 0 30px ${colors.glow.primary}`,
+        position: 'relative',
       }}>
-        <div style={{ textAlign: 'center', marginBottom: spacing['2xl'] }}>
+        <div style={{ textAlign: 'center', marginBottom: spacing['2xl'], position: 'relative' }}>
+          {/* Sprite floats to the left at title level */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            opacity: 0.8,
+            pointerEvents: 'none',
+          }}>
+            <SpriteAnimator
+              character={character}
+              animation="idle"
+              scale={2}
+            />
+          </div>
           <h2 style={{
             fontSize: typography.size['3xl'],
             marginBottom: spacing.md,

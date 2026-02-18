@@ -579,8 +579,8 @@ export function SaBirthGame({
         />
       )}
 
-      {gamePhase === 'failure' && (
-        <FailureScreen onRestart={handleRestart} />
+      {gamePhase === 'failure' && character && (
+        <FailureScreen character={character} onRestart={handleRestart} />
       )}
 
       {gamePhase === 'overload' && character && (

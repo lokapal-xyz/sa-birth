@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { colors, typography, spacing, borderRadius, GradientText, HorizontalProgressBar } from '../../../design-system';
 import { useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
+import type { SpriteCharacter } from './SpriteAnimator';
 
 interface CharacterLoreProps {
   character: number; // 0=ALICE, 1=ROBERT, 2=CAROL
@@ -46,6 +48,12 @@ But first: calibration. Six sensory protocols. Methodical integration. You'll ap
   },
 };
 
+const SPRITE_MAP: Record<0 | 1 | 2, SpriteCharacter> = {
+  0: 'ALICE',
+  1: 'ROBERT',
+  2: 'CAROL',
+};
+
 export function CharacterLore({ character, onContinue }: CharacterLoreProps) {
   const [countdown, setCountdown] = useState(8);
   const lore = CHARACTER_LORE[character as 0 | 1 | 2];
@@ -76,6 +84,14 @@ export function CharacterLore({ character, onContinue }: CharacterLoreProps) {
       <div style={{ maxWidth: '42rem', width: '100%' }}>
         {/* Character Name */}
         <div style={{ textAlign: 'center', marginBottom: spacing['3xl'] }}>
+          {/* Sprite — idles during countdown, runs when ready. Offset right to optically align with centered text */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: spacing.xl, paddingLeft: '3rem' }}>
+            <SpriteAnimator
+              character={SPRITE_MAP[character as 0 | 1 | 2]}
+              animation={countdown > 0 ? 'idle' : 'run'}
+              scale={3}
+            />
+          </div>
           <h1 style={{
             fontSize: typography.size['5xl'],
             marginBottom: spacing.md,

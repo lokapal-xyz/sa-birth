@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { colors, typography, spacing, borderRadius, HorizontalProgressBar } from '../../../design-system';
 import { CircleCheck } from 'lucide-react';
 import { useEffectSound, useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
+import type { SpriteAnimation } from './SpriteAnimator';
 
 type Character = 'ALICE' | 'ROBERT' | 'CAROL';
 type Sense = 'hearing' | 'smell' | 'taste' | 'touch' | 'sight' | 'proprioception';
@@ -147,6 +149,45 @@ Senses don't work in isolation. They integrate automatically. Vision confirms pr
 export function SenseIntegration({ sense, character, score, onContinue }: SenseIntegrationProps) {
   const [countdown, setCountdown] = useState(10);
   
+  // ── Celebration sequence: 6× idle → jump → doublejump → repeat ──────────
+  // We track which phase we're in and how many idle cycles have elapsed.
+  // idle has 4 frames @8fps = 0.5s per cycle. 6 cycles = 3s idle before jump.
+  const [celebAnim, setCelebAnim] = useState<SpriteAnimation>('idle');
+  const [idleCycles, setIdleCycles] = useState(0);
+  const IDLE_CYCLES_BEFORE_JUMP = 6;
+
+  const handleCelebComplete = useCallback(() => {
+    // Called when a non-looping animation (jump/doublejump) finishes one play
+    setCelebAnim('idle');
+    setIdleCycles(0);
+  }, []);
+
+  // Count idle cycles via a timer: idle is 4 frames @ 8fps = 500ms/cycle
+  useEffect(() => {
+    if (celebAnim !== 'idle') return;
+    const cycleMs = (4 / 8) * 1000; // 500ms
+    const timer = setInterval(() => {
+      setIdleCycles(prev => {
+        const next = prev + 1;
+        if (next >= IDLE_CYCLES_BEFORE_JUMP) {
+          clearInterval(timer);
+          setCelebAnim('jump');
+          return 0;
+        }
+        return next;
+      });
+    }, cycleMs);
+    return () => clearInterval(timer);
+  }, [celebAnim]);
+
+  // When jump finishes, move to doublejump
+  const handleJumpComplete = useCallback(() => {
+    setCelebAnim('doublejump');
+  }, []);
+
+  const spriteOnComplete = celebAnim === 'jump' ? handleJumpComplete : handleCelebComplete;
+  // ────────────────────────────────────────────────────────────────────────
+
   // Play success sound on mount
   useEffectSound('senseIntegrated');
   const { play } = useSound();
@@ -175,12 +216,25 @@ export function SenseIntegration({ sense, character, score, onContinue }: SenseI
         <div style={{ textAlign: 'center', marginBottom: spacing['3xl'] }}>
           <div style={{ 
             display: 'flex', 
-            justifyContent: 'center', 
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: spacing.xl,
             marginBottom: spacing.xl,
-          }}
-            className="icon-bounce"
-          >
+          }}>
+            <SpriteAnimator
+              character={character}
+              animation={celebAnim}
+              scale={3}
+              flip
+              onComplete={spriteOnComplete}
+            />
             <CircleCheck size={64} color={colors.state.success} strokeWidth={1.5} />
+            <SpriteAnimator
+              character={character}
+              animation={celebAnim}
+              scale={3}
+              onComplete={spriteOnComplete}
+            />
           </div>
           <h1 style={{
             fontSize: typography.size['4xl'],

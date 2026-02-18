@@ -2,6 +2,7 @@ import type { Character } from '../SaBirthGame';
 import { colors, typography, spacing, borderRadius, GradientText } from '../../../design-system';
 import { ShieldCheck, ShieldAlert, ShieldQuestion } from 'lucide-react';
 import { useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
 
 interface CharacterSelectProps {
   onSelect: (character: Character) => void;
@@ -116,43 +117,54 @@ export function CharacterSelect({ onSelect }: CharacterSelectProps) {
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'space-between',
                 marginBottom: spacing.md,
               }}>
-                <div style={{
-                  width: '2.5rem',
-                  height: '2.5rem',
-                  borderRadius: borderRadius.md,
-                  background: `${char.gradient.match(/#[0-9a-f]{6}/i)?.[0]}20` || colors.bg.elevated,
-                  border: `2px solid ${char.gradient.match(/#[0-9a-f]{6}/i)?.[0]}` || colors.border.active,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginRight: spacing.lg,
-                }}>
-                  <char.Icon 
-                    size={20} 
-                    color={char.gradient.match(/#[0-9a-f]{6}/i)?.[0] || colors.text.accent}
-                    strokeWidth={2}
-                  />
+                {/* Left: shield icon + name/role */}
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <div style={{
+                    width: '2.5rem',
+                    height: '2.5rem',
+                    borderRadius: borderRadius.md,
+                    background: `${char.gradient.match(/#[0-9a-f]{6}/i)?.[0]}20` || colors.bg.elevated,
+                    border: `2px solid ${char.gradient.match(/#[0-9a-f]{6}/i)?.[0]}` || colors.border.active,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginRight: spacing.lg,
+                  }}>
+                    <char.Icon 
+                      size={20} 
+                      color={char.gradient.match(/#[0-9a-f]{6}/i)?.[0] || colors.text.accent}
+                      strokeWidth={2}
+                    />
+                  </div>
+                  <div>
+                    <h3 style={{
+                      margin: 0,
+                      fontSize: typography.size.xl,
+                      fontWeight: typography.weight.bold,
+                    }}>
+                      <GradientText gradient={char.gradient}>
+                        {char.name}
+                      </GradientText>
+                    </h3>
+                    <p style={{
+                      margin: `${spacing.xs} 0 0 0`,
+                      fontSize: typography.size.xs,
+                      color: colors.text.secondary,
+                      fontFamily: typography.fontFamily.mono,
+                    }}>
+                      {char.role}
+                    </p>
+                  </div>
                 </div>
                 <div>
-                  <h3 style={{
-                    margin: 0,
-                    fontSize: typography.size.xl,
-                    fontWeight: typography.weight.bold,
-                  }}>
-                    <GradientText gradient={char.gradient}>
-                      {char.name}
-                    </GradientText>
-                  </h3>
-                  <p style={{
-                    margin: `${spacing.xs} 0 0 0`,
-                    fontSize: typography.size.xs,
-                    color: colors.text.secondary,
-                    fontFamily: typography.fontFamily.mono,
-                  }}>
-                    {char.role}
-                  </p>
+                  <SpriteAnimator
+                    character={char.id}
+                    animation="idle"
+                    scale={2}
+                  />
                 </div>
               </div>
               <p style={{

@@ -1,12 +1,15 @@
 import { colors, typography, spacing, borderRadius } from '../../../design-system';
 import { CircleX } from 'lucide-react';
 import { useEffectSound, useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
+import type { SpriteCharacter } from './SpriteAnimator';
 
 interface FailureScreenProps {
+  character: SpriteCharacter;
   onRestart: () => void;
 }
 
-export function FailureScreen({ onRestart }: FailureScreenProps) {
+export function FailureScreen({ character, onRestart }: FailureScreenProps) {
   // Play failure sound on mount
   useEffectSound('failure');
   const { play } = useSound();
@@ -36,7 +39,11 @@ export function FailureScreen({ onRestart }: FailureScreenProps) {
             justifyContent: 'center', 
             marginBottom: spacing.lg,
           }}>
-            <CircleX size={64} color={colors.state.error} strokeWidth={1.5} />
+            <SpriteAnimator
+              character={character}
+              animation="death"
+              scale={4}
+            />
           </div>
           <h2 style={{
             fontSize: typography.size['3xl'],

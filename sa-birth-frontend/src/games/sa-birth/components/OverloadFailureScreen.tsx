@@ -2,6 +2,7 @@ import type { Character, Sense } from '../SaBirthGame';
 import { colors, typography, spacing, borderRadius } from '../../../design-system';
 import { OctagonAlert } from 'lucide-react';
 import { useEffectSound, useSound } from '../../../utils/useSound';
+import { SpriteAnimator } from './SpriteAnimator';
 
 interface SenseData {
   score: number;
@@ -62,7 +63,11 @@ export function OverloadFailureScreen({ character, totalScore, senseData, onRest
             justifyContent: 'center', 
             marginBottom: spacing.lg,
           }}>
-            <OctagonAlert size={64} color={colors.state.warning} strokeWidth={1.5} />
+            <SpriteAnimator
+              character={character}
+              animation="death"
+              scale={4}
+            />
           </div>
           <h2 style={{
             fontSize: typography.size['3xl'],

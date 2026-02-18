@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useSound } from '../../../utils/useSound';
 import { colors, typography, spacing, borderRadius, GradientText } from '../../../design-system';
 import { Trophy, Link2 } from 'lucide-react';
+import { SpriteAnimator } from './SpriteAnimator';
+import type { SpriteCharacter } from './SpriteAnimator';
 
 type Character = 'ALICE' | 'ROBERT' | 'CAROL';
 
@@ -24,6 +26,11 @@ const CHARACTER_GRADIENTS = {
   0: colors.character.alice,
   1: colors.character.robert,
   2: colors.character.carol,
+};
+const CHARACTER_SPRITES: Record<number, SpriteCharacter> = {
+  0: 'ALICE',
+  1: 'ROBERT',
+  2: 'CAROL',
 };
 
 export function LeaderboardScreen({ 
@@ -181,12 +188,24 @@ export function LeaderboardScreen({
           <div 
             style={{ 
               display: 'flex', 
-              justifyContent: 'center', 
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: spacing.xl,
               marginBottom: spacing.lg,
             }}
-            className="icon-bounce"
           >
-            <Trophy size={64} color={colors.state.warning} strokeWidth={1.5} />
+            <SpriteAnimator
+              character={CHARACTER_SPRITES[selectedCharacter]}
+              animation="run"
+              scale={3}
+              flip
+            />
+            <Trophy size={56} color={colors.state.warning} strokeWidth={1.5} />
+            <SpriteAnimator
+              character={CHARACTER_SPRITES[selectedCharacter]}
+              animation="run"
+              scale={3}
+            />
           </div>
           <h1 style={{
             fontSize: typography.size['4xl'],
