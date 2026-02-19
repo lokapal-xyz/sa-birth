@@ -70,6 +70,7 @@ export const colors = {
     secondary: '#9ca3af',
     tertiary: '#6b7280',
     accent: '#3b82f6',
+    success: '#10b981',
   },
   
   // Glow effects

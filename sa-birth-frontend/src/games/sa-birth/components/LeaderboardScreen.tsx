@@ -213,7 +213,7 @@ export function LeaderboardScreen({
             marginBottom: spacing.md,
           }}>
             <GradientText gradient="linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)">
-              LEADERBOARD
+              ZK:LEADERBOARD
             </GradientText>
           </h1>
           <p style={{

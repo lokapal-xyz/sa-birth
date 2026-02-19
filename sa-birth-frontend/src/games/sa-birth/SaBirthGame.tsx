@@ -24,6 +24,7 @@ import { SenseIntegration }            from './components/SenseIntegration';
 import { SenseFailure }                from './components/SenseFailure';
 import { HubRoom }                     from './components/HubRoom';
 import { NarrativeIntro }              from './components/NarrativeIntro';
+import { ZKLeaderboardDemo }           from './components/ZKLeaderboardDemo';
 import { SuccessScreen }               from './components/SuccessScreen';
 import { LeaderboardScreen }           from './components/LeaderboardScreen';
 import { FailureScreen }               from './components/FailureScreen';
@@ -40,6 +41,7 @@ export type Character = 'ALICE' | 'ROBERT' | 'CAROL';
 export type Sense     = 'hearing' | 'smell' | 'taste' | 'touch' | 'sight' | 'proprioception';
 export type GamePhase =
   | 'intro'
+  | 'zkLeaderboard'
   | 'select'
   | 'lore'
   | 'hub'
@@ -503,7 +505,14 @@ export function SaBirthGame({
       {contractBadge}
 
       {gamePhase === 'intro' && (
-        <NarrativeIntro onComplete={handleIntroComplete} />
+        <NarrativeIntro
+          onComplete={handleIntroComplete}
+          onViewLeaderboard={() => setGamePhase('zkLeaderboard')}
+        />
+      )}
+
+      {gamePhase === 'zkLeaderboard' && (
+        <ZKLeaderboardDemo onBack={() => setGamePhase('intro')} />
       )}
 
       {gamePhase === 'select' && (

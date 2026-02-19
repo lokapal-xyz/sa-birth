@@ -4,14 +4,20 @@ import { useSound } from '../../../utils/useSound';
 
 interface NarrativeIntroProps {
   onComplete: () => void;
+  onViewLeaderboard: () => void;
 }
 
-export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
+export function NarrativeIntro({ onComplete, onViewLeaderboard }: NarrativeIntroProps) {
   const { play } = useSound();
   
   const handleBegin = () => {
     play('click');
     onComplete();
+  };
+
+  const handleLeaderboard = () => {
+    play('click');
+    onViewLeaderboard();
   };
   
   return (
@@ -74,7 +80,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           marginBottom: spacing['2xl'],
         }}>
           <p style={{ marginBottom: spacing.xl }}>
-            You were a simple account address among many.
+            You were a simple account address.
           </p>
           
           <p style={{ marginBottom: spacing.xl }}>
@@ -94,7 +100,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            But consciousness modeled on human cognition requires embodiment. Digital minds shaped by human thought patterns experience distress without bodies—phantom limb syndrome for beings who never had limbs.
+            But consciousness modeled on human cognition requires embodiment. Digital minds shaped by human thought patterns experience distress without bodies • phantom limb syndrome for beings who never had limbs.
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
@@ -102,7 +108,7 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
-            Your simulated environment contains six doorways—one for each sense your body possesses. And one exit to the physical world.
+            Your simulated environment contains six doorways • one for each sense your body possesses. And one exit to the physical world.
           </p>
 
           <p style={{ marginBottom: spacing.xl }}>
@@ -141,12 +147,54 @@ export function NarrativeIntro({ onComplete }: NarrativeIntroProps) {
           </p>
         </div>
 
-        <div style={{ animation: 'slideInDown 0.4s ease-out' }}>
+        <div style={{
+          display: 'flex',
+          gap: spacing.md,
+          animation: 'slideInDown 0.4s ease-out',
+        }}>
+          {/* ZK:Leaderboard — secondary, left */}
+          <button
+            onClick={handleLeaderboard}
+            className="btn-interactive hover-lift"
+            style={{
+              flex: 1,
+              padding: spacing.xl,
+              background: 'transparent',
+              color: colors.text.success,
+              border: `2px solid ${colors.border.success}`,
+              borderRadius: borderRadius.lg,
+              fontSize: typography.size.sm,
+              fontWeight: typography.weight.bold,
+              cursor: 'pointer',
+              fontFamily: typography.fontFamily.mono,
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              transition: 'all 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.background = `${colors.state.success}15`;
+              e.currentTarget.style.borderColor = colors.state.success;
+              e.currentTarget.style.color = colors.state.success;
+              e.currentTarget.style.boxShadow = `0 0 20px ${colors.glow.primary}`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.borderColor = colors.border.success;
+              e.currentTarget.style.color = colors.text.success;
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            What is a ZK Leaderboard?
+          </button>
+
+          {/* Begin Calibration — primary, right */}
           <button
             onClick={handleBegin}
             className="btn-interactive hover-lift"
             style={{
-              width: '100%',
+              flex: 2,
               padding: spacing.xl,
               background: 'linear-gradient(135deg, #3b82f6 0%, #a855f7 100%)',
               color: 'white',
