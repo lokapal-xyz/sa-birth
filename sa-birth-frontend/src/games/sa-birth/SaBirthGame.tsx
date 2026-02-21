@@ -141,6 +141,7 @@ export function SaBirthGame({
 
   // ── Game state ─────────────────────────────────────────────────────────────
   const [gamePhase,            setGamePhase]            = useState<GamePhase>('intro');
+  useEffect(() => { window.scrollTo({ top: 150, behavior: 'instant' }); }, [gamePhase]);
   const [character,            setCharacter]            = useState<Character | null>(null);
   const [completedSenses,      setCompletedSenses]      = useState<Set<Sense>>(new Set());
   const [currentMaze,          setCurrentMaze]          = useState<Sense | null>(null);
@@ -479,7 +480,7 @@ export function SaBirthGame({
           <div style={{ width: '60%', height: '100%', background: 'white', animation: 'pulse 1.5s ease-in-out infinite' }} />
         </div>
       </div>
-    ) : error ? (
+    ) : error && !error.includes('Error(Contract, #3)') ? (
       <div style={{
         position: 'fixed', bottom: '1rem', left: '1rem',
         background: 'rgba(239,68,68,0.95)', backdropFilter: 'blur(10px)',

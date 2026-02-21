@@ -5,6 +5,8 @@
 
 **SA:BIRTH** is a single-player maze calibration game and the canonical prequel to the **Source Agents** franchise. Built on Stellar's Soroban platform using the [Stellar Game Studio](https://jamesbachini.github.io/Stellar-Game-Studio/) toolkit.
 
+**FOR HACKATON JUDGES:** The link to the presentation video is [https://youtu.be/o_WJlA63nOs](https://youtu.be/o_WJlA63nOs)
+
 ---
 
 ## Table of Contents
