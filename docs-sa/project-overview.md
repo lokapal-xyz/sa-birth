@@ -61,6 +61,7 @@
     - [Market Risks](#market-risks)
     - [Execution Risks](#execution-risks)
   - [Conclusion](#conclusion)
+  - [License](#license)
   - [Appendix](#appendix)
 
 ---
@@ -657,6 +658,13 @@ The technology is not the subject of these stories. It is the world the stories 
 The Network needs defenders. The defenders need stories. And the stories need players who truly own them.
 
 **Welcome to Source Agents.**
+
+---
+
+## License
+
+1. Code: MIT — see [LICENSE](./LICENSE) file.
+2. Story and narrative elements: CC BY-NC-SA 4.0 — see [LICENSE](https://creativecommons.org/licenses/by-nc-sa/4.0/) link.
 
 ---
 

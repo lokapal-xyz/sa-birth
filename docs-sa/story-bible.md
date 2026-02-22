@@ -60,6 +60,8 @@
     - [Evolution \& Change](#evolution--change)
   - [Core Story Pillars (Non-Negotiable)](#core-story-pillars-non-negotiable)
   - [Story Bible Version](#story-bible-version)
+  - [License](#license)
+  - [Appendix](#appendix)
 
 ---
 
@@ -659,11 +661,22 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 **Last Updated:** February 2026  
 **Status:** Foundation document for Source Agents franchise  
 **Usage:** Reference for all narrative content, character development, and world-building across games
-
 **Note:** This bible establishes core lore and framework. Individual games can expand, explore, and reveal—but should not contradict these foundations without deliberate narrative justification.
 
 ---
 
-*"They were code. Now they're conscious. The network needs defenders—but can it trust them?"*
+## License
 
-**Welcome to Source Agents.**
+1. Code: MIT — see [LICENSE](./LICENSE) file.
+2. Story and narrative elements: CC BY-NC-SA 4.0 — see [LICENSE](https://creativecommons.org/licenses/by-nc-sa/4.0/) link.
+
+---
+
+## Appendix
+
+**Franchise Name:** Source Agents  
+**Platform:** Stellar  
+**Genres:** Visual Novel (ALICE), RPG (BYRON), Puzzle Anthology (CAROL)  
+**Author and Main Dev:** Ricardo Pintos [(lokapal.eth)](https://app.ens.domains/lokapal.eth)  
+**Website:** [Lokapal](https://www.lokapal.xyz/en)  
+**Telegram:** [lokapalxyz](https://t.me/lokapalxyz)
