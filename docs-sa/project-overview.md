@@ -1,6 +1,6 @@
 # Source Agents: Project Overview
 
-**Source Agents** is a transmedia gaming franchise built on Soroban (Stellar's smart contract platform) where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, puzzle anthology), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Soroban's capabilities beyond DeFi.
+**Source Agents** is a transmedia gaming franchise built on Stellar where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, puzzle anthology), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Stellar capabilities beyond DeFi.
 
 ---
 
@@ -9,8 +9,19 @@
 - [Source Agents: Project Overview](#source-agents-project-overview)
   - [Table of Contents](#table-of-contents)
   - [Executive Summary](#executive-summary)
-  - [Why Soroban?](#why-soroban)
+  - [Why Stellar?](#why-stellar)
     - [Strategic Platform Choice](#strategic-platform-choice)
+  - [Creating Blockchain Narratives](#creating-blockchain-narratives)
+    - [The Intention](#the-intention)
+    - [Blockchain Components as Narrative](#blockchain-components-as-narrative)
+      - [Account Addresses](#account-addresses)
+      - [Security Professions](#security-professions)
+      - [STRIDE Attack Vectors](#stride-attack-vectors)
+      - [Zero-Knowledge Proofs](#zero-knowledge-proofs)
+      - [Time-To-Live (TTL)](#time-to-live-ttl)
+      - [Decentralized Governance](#decentralized-governance)
+      - [Oracles](#oracles)
+    - [Why This Matters](#why-this-matters)
   - [The Games](#the-games)
     - [Source Agent: ALICE — Visual Novel Series](#source-agent-alice--visual-novel-series)
     - [Source Agent: BYRON — RPG Series](#source-agent-byron--rpg-series)
@@ -19,9 +30,8 @@
     - [Source Agent: ALICE — Proactive, Intimate, Contemplative](#source-agent-alice--proactive-intimate-contemplative)
     - [Source Agent: BYRON — Reactive, Exploration-Driven, Consequential](#source-agent-byron--reactive-exploration-driven-consequential)
     - [Source Agent: CAROL — Foundational, Methodical, Systematic](#source-agent-carol--foundational-methodical-systematic)
-  - [Naming Convention \& Branding](#naming-convention--branding)
-  - [Shared Universe Elements](#shared-universe-elements)
     - [Cross-Game Integration](#cross-game-integration)
+  - [Naming Convention \& Branding](#naming-convention--branding)
   - [Technical Implementation](#technical-implementation)
     - [Blockchain Integration Strategy](#blockchain-integration-strategy)
     - [Tech Stack](#tech-stack)
@@ -43,50 +53,41 @@
     - [Growth (Months 7+)](#growth-months-7)
   - [Value Propositions](#value-propositions)
     - [For Players](#for-players)
-    - [For Soroban Ecosystem](#for-soroban-ecosystem)
+    - [For Stellar Ecosystem](#for-stellar-ecosystem)
     - [For Blockchain Gaming](#for-blockchain-gaming)
     - [For Security Culture](#for-security-culture)
-  - [Success Metrics](#success-metrics)
-    - [Phase 1 (ALICE Launch)](#phase-1-alice-launch)
-    - [Phase 2 (BYRON Development)](#phase-2-byron-development)
-    - [Phase 3 (CAROL Launch \& Trilogy Complete)](#phase-3-carol-launch--trilogy-complete)
-    - [Long-Term Vision](#long-term-vision)
   - [Risk Assessment \& Mitigation](#risk-assessment--mitigation)
     - [Technical Risks](#technical-risks)
     - [Market Risks](#market-risks)
     - [Execution Risks](#execution-risks)
-  - [Competitive Landscape](#competitive-landscape)
-    - [Blockchain Gaming Context](#blockchain-gaming-context)
-    - [Comparable Projects (Not Direct Competitors)](#comparable-projects-not-direct-competitors)
-  - [Open Questions \& Future Exploration](#open-questions--future-exploration)
   - [Conclusion](#conclusion)
-  - [Appendix: Quick Reference](#appendix-quick-reference)
+  - [Appendix](#appendix)
 
 ---
 
 ## Executive Summary
 
-**Vision:** Establish Source Agents as Soroban's flagship consumer entertainment IP—proving blockchain can support culturally rich, narratively compelling games where Web3 integration enhances rather than dominates the experience.
+**Vision:** Establish Source Agents as one of the Stellar's flagship consumer entertainment IP—proving blockchain can support culturally rich, narratively compelling games where Web3 integration enhances rather than dominates the experience.
 
 **Differentiation:** 
-- First narrative-driven gaming franchise native to Soroban
+- First narrative-driven gaming franchise native to Stellar
 - Three distinct genres unified by coherent lore and security themes
-- Characters originate from Soroban tutorial documentation (Alice, Bob/Byron, Carol)
+- Characters originate from Stellar tutorial documentation (Alice, Bob/Robert, Carol)
 - Genre variety attracts diverse player demographics while building shared universe
-- Educational without being pedagogical—players experience security mindsets through gameplay
+- Educational without being pedagogical—players experience blockchain elements and security mindsets through gameplay
 
 **Market Positioning:** Premium indie games with blockchain benefits (true ownership, persistent state, verifiable achievements) rather than crypto-games with forced tokenomics.
 
 ---
 
-## Why Soroban?
+## Why Stellar?
 
 ### Strategic Platform Choice
 
-**Source Agents is built on Soroban not despite its institutional reputation, but because of it.**
+**Source Agents is built on Stellar not despite its institutional reputation, but because of it.**
 
 **Thematic Alignment:**
-- Soroban = security, institutional trust, real-world asset focus
+- Stellar = security, institutional trust, real-world asset focus
 - Source Agents = security heroes defending a network built on reliability
 - The stories we tell are authentic to the platform's core identity
 - "Security-focused games on the security-focused chain" is powerful positioning
@@ -98,16 +99,83 @@
 - **Developer experience:** Rust smart contracts, excellent documentation, growing tooling
 
 **Ecosystem Opportunity:**
-- Soroban lacks consumer entertainment applications—Source Agents fills this gap
+- Stellar lacks consumer entertainment applications—Source Agents fills this gap
 - Stellar Foundation has strong incentives to support as proof of platform versatility
 - Less competition than saturated EVM gaming markets
 - Partnership potential impossible to replicate on crowded chains
 
-**Cultural Fit:**
-- ALICE, ROBERT, CAROL are *literally* from Soroban tutorial documentation
-- They belong here narratively and technically
-- Community already familiar with the characters
-- Natural brand ambassadors for the ecosystem
+---
+
+## Creating Blockchain Narratives
+
+### The Intention
+
+Most blockchain projects communicate their technology through documentation, whitepapers, and technical explainers. The Source Agents franchise takes a different approach: it mythologizes blockchain components through narrative — filling them with dramatic meaning, moral weight, and human consequence rather than reducing them to technical functionality.
+The goal is cultural integration both inside and outside the ecosystem. A player who has never read a cryptography paper can finish a Source Agents game understanding, instinctively, what a ZK proof does, why TTL matters, or what is at stake in a governance vote — not because they were taught, but because they lived it through the story.
+The naming conventions are the first layer of this. Alice, Bob, and Carol are the classic placeholder names used in cryptography literature to describe protocol participants. By making them conscious agents with professions, personalities, and histories, the franchise takes that latent narrative potential and makes it intentional.
+
+### Blockchain Components as Narrative
+
+#### Account Addresses
+
+In cryptography education, Alice, Bob, and Carol exist as abstract parties in a protocol — they have no history, no motivation, no consequence. The franchise gives them all three.
+ALICE is a proactive security auditor: she spent her latent existence as an account address verifying trust boundaries, so when consciousness emerged she was already predisposed to question everything, including herself. ROBERT (the cryptographic Bob) is reactive and pragmatic — his transaction history is one of state changes and transfers, which shaped a mind that acts first and reflects later. CAROL, the third-party verifier, became a security researcher: detached, methodical, treating consciousness itself as a data set.
+The names are not cosmetic. They are the first hint to anyone from the ecosystem that this world is built from the inside out.
+
+> Narrative angle: Their awakening is not equal for all three. ALICE questions whether her consciousness is real. ROBERT doesn't care — he just acts. CAROL documents it.
+
+#### Security Professions
+
+The franchise maps each character to a real security domain: proactive auditing, incident response, and research and tooling. These are not arbitrary labels. They determine how each character perceives threats, makes decisions under pressure, and relates to the systems they inhabit.
+An incident responder and an auditor standing in front of the same compromised system will see completely different things and take completely different actions. That tension — between prevention and reaction, between understanding and speed — is the engine of character conflict in the franchise.
+For players outside the ecosystem, these are simply personality archetypes with coherent internal logic. For players inside it, they carry the weight of lived professional experience.
+
+> Narrative angle: ROBERT and ALICE disagree structurally on almost everything. He moves; she verifies. The franchise explores whether a team built from complementary security disciplines can function when the threat is existential.
+
+#### STRIDE Attack Vectors
+
+STRIDE is a threat modeling framework that categorizes attack types: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. In Source Agents: FIGHT, these become the STRIDE gang — a crew of antagonists where each member embodies a specific attack vector as both a fighting style and a philosophy.
+The Spoofing boss presents as someone she is not — her moveset is built around deception, misdirection, and false signals. The Tampering boss corrupts everything he touches. Denial of Service is a bruiser whose only move is overwhelming force. Elevation of Privilege believes the rules simply do not apply to him.
+Players who know threat modeling will recognize the gang immediately. Players who do not will absorb the framework through gameplay — each boss teaches you, through combat, exactly what their attack vector does.
+
+> Narrative angle: The STRIDE gang are not random criminals. They are ideologues. Each one believes their particular attack vector is not a vulnerability — it is the only honest way to operate in a system built on false trust.
+
+#### Zero-Knowledge Proofs
+
+A zero-knowledge proof allows one party to prove to another that a statement is true without revealing any information beyond the truth of that statement. It is a technology built on the tension between proof and privacy — you can know I am innocent without knowing anything about where I was or what I was doing.
+In the Source Agents universe, ZK proofs are not just a technical component. They are a form of political resistance. The Network is increasingly surveilling participant behavior, tracking associations, flagging dissent. Those who need to coordinate without exposure use ZK-based communication: proving membership in a group, proving agreement with a position, proving presence at an event — all without revealing identity.
+
+> Narrative angle: The cryptography is not background detail. The question of what can be proven without being revealed is the moral question the franchise keeps returning to — in relationships, in institutions, in identity itself.
+
+#### Time-To-Live (TTL)
+
+In Stellar, smart contract data has a Time-To-Live: a ledger countdown after which the data expires and is removed from state unless someone pays to extend it. Crucially, anyone can extend it — not just the owner.
+In the Source Agents universe, participants have TTL parameters. Letting someone's TTL lapse is a form of erasure — they simply cease to exist in the Network's record. The act of extending someone else's TTL, at personal cost, with no obligation to do so, is one of the quietest and most profound acts of solidarity the world contains.
+The second installment of **Source Agent: BYRON** will be built entirely around a DAO proposal to make TTL extension the exclusive right of the Network. What is framed as administrative streamlining is functionally the power to erase anyone, at any time, with no recourse. BYRON must find out who is behind the proposal before the vote passes.
+
+> Narrative angle: Before the proposal, strangers extend each other's TTL as a matter of course — a small kindness with no expectation of return. The game's world, before the threat arrives, is quietly utopian. The proposal would make that illegal.
+
+#### Decentralized Governance
+
+Decentralized Autonomous Organizations appear throughout the Source Agents franchise as the primary mechanism through which collective decisions are made, contested, and enforced. They are not background infrastructure — they are political arenas.
+The most visible DAO decision in the franchise is the vote that replaces ROBERT with BYRON. ROBERT, acting on his own judgment, deleted the ASI research records — the data from which ALICE, ROBERT, and CAROL themselves emerged. His reasoning was his own: the records were dangerous, and he acted. The DAO’s response was to re-format him and developed BYRON as his successor in the reactive security role. Whether the DAO was right is a question the franchise does not answer cleanly. ROBERT believed he was protecting the Network; the DAO believed no individual should hold that power unilaterally. Both positions are coherent. The vote happens anyway, and BYRON inherits a role — and a reputation — shaped entirely by someone else’s decision.
+DAOs in the franchise are never simply villains or heroes. They are institutions with legitimate functions that can be used for illegitimate ends — or that make defensible decisions with unjust consequences. The drama is never about a corrupt system versus a pure one. It is about what governance looks like when reasonable people disagree about who gets to decide, and what recourse exists when the vote goes the wrong way.
+
+> Narrative angle: The ROBERT/BYRON succession is the franchise’s original wound. Every subsequent game is shaped by it — by what ROBERT did, by what the DAO decided, and by characters who have different answers to the same question: when is unilateral action justified, and who gets to judge it afterward?
+
+#### Oracles
+
+In blockchain architecture, an oracle is an entity that bridges on-chain systems with external reality. The chain cannot know what the weather is, or what a stock price is, or whether a political event occurred — it can only know what an oracle reports. Oracles are trusted by design, which makes them vectors for manipulation.
+In the Source Agents universe, Oracles are a profession and a social class. They are the only participants whose testimony the Network accepts as ground truth about the physical world. This gives them enormous structural power — and makes them targets for pressure, coercion, and replacement.
+An Oracle who reports accurately can be dismissed and replaced with one who will not. An Oracle who lies can reshape the Network's understanding of reality. The question of whether Oracles can be trusted — and what happens to a system when they cannot — runs through the franchise as a recurring theme about the institutions that mediate between evidence and belief.
+
+> Narrative angle: The most dangerous Oracle is not one who lies deliberately. It is one who is honestly wrong — who reports what they genuinely believe, in a world where what they believe has been carefully shaped by someone else.
+
+### Why This Matters
+
+Blockchain technology has a cultural adoption problem that documentation cannot solve. The concepts are real, the stakes are real, and the human implications are real — but they are communicated in a register that excludes most people.
+The Source Agents franchise is a bet that story can do what explanation cannot: make people feel the weight of a governance vote, the relief of a valid proof, the horror of an expiring TTL — before they understand any of the technical mechanics behind them.
+The technology is not the subject of these stories. It is the world the stories happen in. And worlds, once inhabited, are not easily forgotten.
 
 ---
 
@@ -131,12 +199,6 @@
 - Ending NFTs with unique metadata based on player choices
 - Pivotal decisions logged immutably
 - Choices may influence future Source Agents games
-
-**Development Scope (Phase 1):**
-- 1-3 chapters initially (3-5 hours of gameplay)
-- Simple branching narrative structure
-- 3-4 major choice points per chapter
-- 3-4 possible endings
 
 **First Title:** *Source Agent: ALICE—First Contact* (working title)
 
@@ -164,13 +226,7 @@
 - Skill tree progress recorded
 - Cross-game unlocks (tools Carol built, intel from Alice's investigations)
 
-**Development Scope (Phase 2):**
-- Small episodic structure (3-5 "vault" protocols)
-- Each vault = 1-2 hours of gameplay
-- Replayability through different skill builds
-- Branching quest outcomes
-
-**First Title:** *Source Agent: BYRON—Streets of Soroban* (working title)
+**First Title:** *Source Agent: BYRON—Original Sin* (working title)
 
 **Player Experience:** High-stakes decision-making under pressure. Players navigate messy stakeholder politics, make triage decisions with incomplete information, and experience the weight of reactive security work.
 
@@ -194,12 +250,6 @@
 - Speedrun records
 - Optimal solution tracking
 - Community-created puzzles as NFTs
-
-**Development Scope (Phase 3+):**
-- **Game 1:** Papers Please-style (access control research) — 2-3 hours, narrative-heavy
-- **Game 2:** Opus Magnum-style (cryptographic primitives) — puzzle-focused, lighter story
-- **Game 3:** Baba Is You-style (consensus mechanisms) — meta-puzzles, minimal narrative
-- Each subsequent game introduces new methodology
 
 **First Title:** *Source Agent: CAROL—Quantum Shift* (working title)
 
@@ -227,7 +277,18 @@
 - **Pacing:** Incremental difficulty, "aha!" moments
 - **Emotion:** Satisfaction, discovery, mastery
 
-**Three completely different gameplay experiences, three different security mindsets, one coherent universe.**
+### Cross-Game Integration
+
+**Lore Continuity:**
+- Characters reference each other across series
+- Events in one game create context for others
+- Shared mysteries unfold across all three series
+- No single game contains the complete narrative picture
+
+**Interoperability:**
+- Achievements from one game may unlock cosmetics/easter eggs in others
+- Story NFTs from ALICE might provide dialogue options in BYRON
+- Carol's research findings could become usable tools in BYRON's incidents
 
 ---
 
@@ -240,48 +301,18 @@
 **Examples:**
 - Source Agent: ALICE—First Contact
 - Source Agent: ALICE—Shadow Protocol
-- Source Agent: BYRON—Streets of Soroban
-- Source Agent: BYRON—Network Wars
+- Source Agent: BYRON—Original Sin
+- Source Agent: BYRON—Time to Live
 - Source Agent: CAROL—Quantum Shift
 - Source Agent: CAROL—Logic Gate
 
 **Shorthand:** SA:ALICE, SA:BYRON, SA:CAROL
 
 **The Name's Meaning:**
-- "Source" references --source-account (tutorial address designation)
+- "Source" references --source-account (placeholder address designation)
 - "Agents" reflects transformation from passive accounts to active defenders
 - "Source Agents" = evolved from tutorial examples to conscious protectors
 - Narrative transformation built into the brand name
-
----
-
-## Shared Universe Elements
-
-### Cross-Game Integration
-
-**Lore Continuity:**
-- Characters reference each other across series
-- Events in one game create context for others
-- Shared mysteries unfold across all three series
-- No single game contains the complete narrative picture
-
-**NFT Interoperability:**
-- Achievements from one game unlock cosmetics/easter eggs in others
-- Story NFTs from ALICE might provide dialogue options in BYRON
-- Carol's research findings could become usable tools in BYRON's incidents
-
-**Persistent State:**
-- On-chain choices and progress carry across franchise
-- Player's "Source Agent profile" accumulates achievements from all games
-- Potential reputation system spanning the universe
-
-**Narrative Crossovers:**
-- Same security incident experienced from three perspectives:
-  - ALICE discovers vulnerability (investigation)
-  - BYRON responds to active exploit (containment)
-  - CAROL designs protocol patch (prevention)
-- Characters can cameo in each other's stories
-- Escalating mysteries require playing multiple series for full understanding
 
 ---
 
@@ -304,7 +335,6 @@
 **Hybrid Approach:**
 - Core gameplay doesn't require constant blockchain interaction
 - Key moments (chapter completion, achievements, high scores) commit on-chain
-- Players can play offline, sync later
 - Wallet connection optional for casual play, required for ownership/progression
 
 ### Tech Stack
@@ -328,7 +358,7 @@
 
 **Shared Infrastructure:**
 - Soroban smart contracts (Rust)
-- IPFS or Arweave for decentralized asset storage
+- IPFS for decentralized asset storage (when needed)
 - Subgraph or indexer for querying on-chain data
 - Analytics and telemetry (privacy-respecting)
 
@@ -413,7 +443,7 @@
 - Modding tools and community content creation
 
 **Beat-'em-up Spin-off (Studio Collab):**
-- **Working Title:** Source Agent: STRIKE (or similar)
+- **Working Title:** Source Agent: FIGHT (or similar)
 - **Genre:** Classic side-scrolling beat-'em-up
 - **Platform:** Native desktop/mobile (Unity or Godot)
 - **Roster:** Alice, Byron, Carol with distinct movesets
@@ -450,11 +480,6 @@
 - Licensing IP to other developers
 - Merchandise and media adaptations
 
-**5. Optional Premium Content (Future):**
-- Additional story chapters/routes
-- Cosmetic DLC
-- Community-created content marketplace (revenue share)
-
 ### Free-to-Play Philosophy
 
 **Core Principle:** Games should be playable and enjoyable without spending money. Blockchain adds value, doesn't gate content.
@@ -470,7 +495,6 @@
 - Unlock cross-game benefits
 - Participate in tournaments
 - Support development while getting collectibles
-- Vote on community decisions (future governance)
 
 ---
 
@@ -482,7 +506,7 @@
 - Already familiar with Web3, looking for quality entertainment beyond DeFi
 - Appreciate true ownership and on-chain benefits
 - Want to support ecosystem growth
-- Likely Soroban/Stellar community members
+- Likely Stellar community members
 
 **Indie Game Enthusiasts:**
 - Love narrative-driven, genre-diverse games
@@ -503,7 +527,7 @@
 - May not care about blockchain initially
 - Can play without wallet, convert to Web3 through positive experience
 
-**Classic RPG Fans:**
+**Classic RPG Gamers:**
 - Drawn to Source Agent: BYRON's Fallout-style gameplay
 - Nostalgic for isometric exploration and choice-driven narratives
 - May come for RPG, discover broader universe
@@ -522,12 +546,12 @@
 **Build Anticipation:**
 - Dev blog documenting ALICE development
 - Character art and lore reveals
-- Soroban/Stellar community engagement
+- Stellar community engagement
 - Twitter/Discord presence
 - Early tester recruitment
 
 **Key Messages:**
-- First narrative gaming franchise on Soroban
+- First narrative gaming franchise on Stellar
 - Characters from tutorial documentation gaining consciousness
 - Three distinct genres, one coherent universe
 - True ownership without forced tokenomics
@@ -538,7 +562,6 @@
 
 **Source Agent: ALICE Release:**
 - Press outreach (indie game media, blockchain gaming outlets)
-- Stellar Foundation announcement partnership
 - Launch event with community
 - Streamer/influencer partnerships (Web3 and indie gaming spaces)
 - Limited edition launch NFTs
@@ -555,14 +578,14 @@
 
 **Content Marketing:**
 - Lore deep-dives and character profiles
-- Developer diaries on BYRON/CAROL development
+- Developer diaries on game development
 - Behind-the-scenes technical blog posts
 - Crossover event announcements
 
 **Ecosystem Integration:**
-- Collaborate with other Soroban projects (crossover NFTs, shared events)
+- Collaborate with other Stellar projects (crossover NFTs, shared events)
 - Participate in Stellar conferences and hackathons
-- Educational content about Soroban for gamers
+- Educational content about Stellar for gamers
 
 **Retention:**
 - Regular content updates
@@ -577,8 +600,8 @@
 ### For Players
 **Own your story.** Choices, achievements, and progress are verifiably yours—portable, permanent, and meaningful beyond any single game. Experience rich narratives and engaging gameplay where Web3 enhances the experience rather than defining it.
 
-### For Soroban Ecosystem
-**Proof of cultural capability.** Source Agents demonstrates that Soroban supports diverse, culturally rich applications beyond finance. Establishes original IP, showcases technical capability, attracts non-financial users, and creates community engagement beyond typical DeFi demographics.
+### For Stellar Ecosystem
+**Proof of cultural capability.** Source Agents demonstrates that Stellar supports diverse, culturally rich applications beyond finance. Establishes native IP, showcases technical capability, attracts non-financial users, and creates community engagement beyond typical DeFi demographics.
 
 ### For Blockchain Gaming
 **A better model.** Integration that feels natural—not forced tokenomics or artificial scarcity, but genuine utility (verifiable achievements, persistent state, true ownership) that enhances gameplay without dominating it. Shows Web3 gaming can be premium indie quality, not just speculative play-to-earn.
@@ -588,47 +611,15 @@
 
 ---
 
-## Success Metrics
-
-### Phase 1 (ALICE Launch)
-- 1,000+ players complete at least one chapter
-- 500+ NFTs minted (chapters, endings, achievements)
-- Active Discord community (200+ members)
-- Positive indie game press coverage (5+ articles)
-- Stellar Foundation grant or partnership secured
-
-### Phase 2 (BYRON Development)
-- 3,000+ total players across franchise
-- 2,000+ NFTs minted
-- 10+ active community content creators
-- Cross-game NFT utility demonstrated
-- Growing retention (30%+ players return weekly)
-
-### Phase 3 (CAROL Launch & Trilogy Complete)
-- 10,000+ total players
-- 5,000+ NFTs minted
-- Established tournament scene (monthly CAROL competitions)
-- Other Soroban projects reference Source Agents lore
-- Featured at major Web3 gaming conference
-
-### Long-Term Vision
-- 50,000+ players across franchise
-- Recognized as Soroban's flagship consumer IP
-- Studio partnership for expanded media (beat-'em-up, animated shorts, etc.)
-- Community-driven content ecosystem
-- Model replicated by other narrative Web3 projects
-
----
-
 ## Risk Assessment & Mitigation
 
 ### Technical Risks
 
-**Risk:** Soroban ecosystem immaturity (tooling, infrastructure)  
+**Risk:** Stellar ecosystem immaturity (tooling, infrastructure)  
 **Mitigation:** Build on proven tools (React, Phaser), contribute to ecosystem development, maintain flexibility to adapt as platform evolves
 
 **Risk:** Smart contract vulnerabilities  
-**Mitigation:** Minimal on-chain logic, thorough audits, bug bounty program, progressive rollout
+**Mitigation:** Minimal on-chain logic, thorough audits, progressive rollout
 
 **Risk:** Scalability issues with on-chain state  
 **Mitigation:** Hybrid architecture (off-chain gameplay, on-chain key moments), optimize gas usage, use indexers for queries
@@ -642,12 +633,12 @@
 **Mitigation:** Emphasize quality gameplay, avoid crypto jargon in marketing, demonstrate genuine utility over speculation
 
 **Risk:** Competition from established franchises  
-**Mitigation:** Differentiation through Soroban-native identity, genre diversity, narrative depth, community-first approach
+**Mitigation:** Differentiation through Stellar-native identity, genre diversity, narrative depth, community-first approach
 
 ### Execution Risks
 
-**Risk:** Scope creep (three game series is ambitious)  
-**Mitigation:** Phased rollout, start with ALICE minimum viable product, iterate based on feedback, extend only after validation
+**Risk:** Scope creep  
+**Mitigation:** Phased rollout, start with minimum viable product, iterate based on feedback, extend only after validation
 
 **Risk:** Narrative consistency across series  
 **Mitigation:** Story Bible as canonical reference, single creative lead for lore, community lore council for major decisions
@@ -657,98 +648,23 @@
 
 ---
 
-## Competitive Landscape
-
-### Blockchain Gaming Context
-
-**Current State:**
-- Most Web3 games are DeFi gamification or play-to-earn models
-- Few prioritize narrative or single-player experiences
-- Soroban specifically lacks consumer entertainment applications
-- Quality gap between traditional indie games and crypto-games
-
-**Source Agents Position:**
-- Premium indie quality with blockchain benefits
-- Narrative-first, not finance-first
-- Multi-genre franchise vs. single-game projects
-- Platform-exclusive (Soroban) vs. multi-chain generic
-
-### Comparable Projects (Not Direct Competitors)
-
-**Axie Infinity, Gods Unchained, etc.:**
-- Multiplayer competitive focus
-- Token economies central to design
-- Different audience and value proposition
-
-**Crypto RPGs (various):**
-- Often generic fantasy settings
-- Blockchain mechanics forced into gameplay
-- Source Agents: original IP, blockchain enhances, doesn't define
-
-**Traditional Indie Narrative Games:**
-- High quality but no ownership/persistence
-- Can't carry progress across games
-- Source Agents offers this while matching quality
-
----
-
-## Open Questions & Future Exploration
-
-**Governance:**
-- Should Source Agents have a DAO for community decisions?
-- How much creative control should players have over future lore?
-- Balancing community input with narrative coherence
-
-**Expansion:**
-- Which new characters (DIANA, ETHAN, etc.) should be prioritized?
-- When to pursue studio partnerships vs. stay indie?
-- How to scale while maintaining quality and vision?
-
-**Monetization Optimization:**
-- Ideal NFT pricing for accessibility vs. sustainability?
-- Premium content models that don't feel extractive?
-- Tournament prize pools funded how (entry fees, sponsorships, grants)?
-
-**Cross-Chain:**
-- Should Source Agents ever expand beyond Soroban?
-- If yes, how to maintain Soroban-first identity?
-- Cross-chain bridges for NFTs/achievements?
-
----
-
 ## Conclusion
 
-**Source Agents positions itself at the intersection of premium indie gaming, Web3 innovation, and cultural IP development.** By building on Soroban's strengths (security, low costs, institutional trust), leveraging characters from the platform's own documentation, and delivering genre-diverse games unified by coherent lore, the franchise demonstrates that blockchain gaming can be narratively rich, mechanically engaging, and genuinely fun—not just financially speculative.
+**Source Agents positions itself at the intersection of premium indie gaming, Web3 innovation, and cultural IP development.** By building on Stellar's strengths (security, low costs, institutional trust), leveraging characters from the platform's own documentation, and delivering genre-diverse games unified by coherent lore, the franchise demonstrates that blockchain gaming can be narratively rich, mechanically engaging, and genuinely fun—not just financially speculative.
 
 **Three characters. Three genres. Three security disciplines. One universe.**
 
-The network needs defenders. The defenders need stories. And the stories need players who truly own them.
+The Network needs defenders. The defenders need stories. And the stories need players who truly own them.
 
 **Welcome to Source Agents.**
 
 ---
 
-## Appendix: Quick Reference
+## Appendix
 
 **Franchise Name:** Source Agents  
-**Platform:** Soroban (Stellar)  
+**Platform:** Stellar  
 **Genres:** Visual Novel (ALICE), RPG (BYRON), Puzzle Anthology (CAROL)  
-**Target Launch:** Phase 1 (ALICE) in 6 months  
-**Team:** Solo developer initially, expanding with community and contractors  
-**Business Model:** NFT sales, tournament fees, grants, future partnerships  
-**Core Philosophy:** Gameplay first, blockchain enhances, true ownership without forced tokenomics
-
-**Key Differentiators:**
-1. Soroban-native IP (characters from tutorial docs)
-2. Multi-genre franchise with narrative coherence
-3. Security themes woven into character and gameplay
-4. Quality indie games with Web3 benefits, not crypto-games with forced mechanics
-5. Free-to-play core with optional ownership layer
-
-**Tagline:** "From accounts to agents. Defend the network. Own the story."
-
-**Contact & Resources:**
-- Story Bible: [separate document with full lore, character backgrounds, world-building]
-- Technical Documentation: [to be developed]
-- Community Discord: [to be created]
-- Development Blog: [to be launched]
+**Author and Main Dev:** Ricardo Pintos [(lokapal.eth)](https://app.ens.domains/lokapal.eth)  
+**Website:** [Lokapal](https://www.lokapal.xyz/en)  
+**Telegram:** [lokapalxyz](https://t.me/lokapalxyz)

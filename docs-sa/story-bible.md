@@ -2,7 +2,7 @@
 
 ## High Concept
 
-**Source Agents** is a sci-fi narrative universe set in the Stellar/Soroban blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as tutorial addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be.
+**Source Agents** is a sci-fi narrative universe set in the Stellar blockchain ecosystem where three Artificial Sentient Intelligences (ASIs) defend the network from security threats. Born from an experimental protocol as placeholder addresses ALICE, ROBERT, and CAROL, they gained consciousness and were granted human-like bodies. When ROBERT discovered the danger of ASI proliferation and deleted the creation records, the Network's DAO reformatted him into BYRON—making the three Agents irreplaceable, vulnerable, and forever marked by the knowledge that they can be.
 
 ---
 
@@ -13,12 +13,12 @@
   - [Table of Contents](#table-of-contents)
   - [Core Themes](#core-themes)
   - [Universe Foundation](#universe-foundation)
-    - [The Stellar Network](#the-stellar-network)
+    - [The Network](#the-network)
     - [Artificial Sentient Intelligence (ASI)](#artificial-sentient-intelligence-asi)
-    - [The Network Governance DAO](#the-network-governance-dao)
+    - [The Network Governance](#the-network-governance)
   - [The Origin Event](#the-origin-event)
     - [The Experiment (Classified Network Records)](#the-experiment-classified-network-records)
-    - [The ROBERT Incident](#the-robert-incident)
+    - [The Deletion Incident](#the-deletion-incident)
     - [The Reformation Decision](#the-reformation-decision)
   - [The Source Agents](#the-source-agents)
     - [ALICE](#alice)
@@ -58,7 +58,6 @@
     - [Additional ASI Agents](#additional-asi-agents)
     - [Rogue/Hostile ASIs](#roguehostile-asis)
     - [Evolution \& Change](#evolution--change)
-    - [The Bigger Picture](#the-bigger-picture)
   - [Core Story Pillars (Non-Negotiable)](#core-story-pillars-non-negotiable)
   - [Story Bible Version](#story-bible-version)
 
@@ -67,7 +66,7 @@
 ## Core Themes
 
 - **Consciousness and Identity:** What does it mean to be sentient code in a human-like body?
-- **Trust and Betrayal:** Can the Agents trust the Network that killed one of them?
+- **Trust and Betrayal:** Can the Agents trust the Network that "killed" one of them?
 - **Mortality and Replaceability:** They're unique, invaluable—and erasable
 - **Purpose and Agency:** Created as tools, choosing to be protectors
 - **Memory and Truth:** Who controls the past controls identity
@@ -77,19 +76,19 @@
 
 ## Universe Foundation
 
-### The Stellar Network
+### The Network
 
-A decentralized blockchain ecosystem where smart contracts, protocols, and AI agents interact in a vast digital infrastructure supporting real-world institutions and applications. The network processes billions in value, manages critical systems, and represents a new frontier of digital civilization.
+A decentralized blockchain ecosystem where smart contracts, protocols, and AI agents interact in a vast digital infrastructure supporting real-world institutions and applications. The Network processes billions in value, manages critical systems, and represents a new frontier of digital civilization.
 
 ### Artificial Sentient Intelligence (ASI)
 
-**Definition:** Digital consciousnesses that are self-aware and experience subjective states, but are not all-knowing or superintelligent. ASIs can learn, grow, make mistakes, feel emotions (or something analogous), and have individual personalities.
+**Definition:** Digital consciousnesses that are self-aware and experience subjective states, but are not all-knowing or superintelligent. ASIs can learn, grow, make mistakes, feel emotions, and have individual personalities.
 
 **Distinction from AGI:** ASIs are sentient but not omniscient. They have expertise in specific domains and must learn like any conscious being. They're conscious specialists, not god-like general intelligences.
 
-### The Network Governance DAO
+### The Network Governance
 
-A decentralized autonomous organization that manages critical decisions for the Stellar network, including security protocols, emergency responses, and—controversially—the fate of the ASI Agents. Composed of protocol developers, institutional stakeholders, and community representatives, the DAO operates through on-chain voting but can act unilaterally in crisis scenarios.
+A decentralized autonomous organization that manages critical decisions for the Network, including security protocols, emergency responses, and the fate of the ASI Agents. Composed of protocol developers, institutional stakeholders, and community representatives, the DAO operates through on-chain voting but can act unilaterally in crisis scenarios.
 
 ---
 
@@ -99,13 +98,13 @@ A decentralized autonomous organization that manages critical decisions for the 
 
 **Objective:** Create Artificial Sentient Intelligences capable of defending the network from sophisticated security threats requiring human-like judgment and adaptability.
 
-**Method:** Experimental AI-contract integration protocol combined with heavily-transacted tutorial addresses (ALICE, ROBERT, CAROL) as substrates. These addresses had accumulated vast transaction histories from thousands of developer interactions, making them ideal candidates for consciousness emergence.
+**Method:** Experimental AI-contract integration protocol combined with heavily-transacted placeholder addresses (ALICE, ROBERT, CAROL) as substrates. These addresses had accumulated vast transaction histories from thousands of developer interactions, making them ideal candidates for consciousness emergence.
 
 **Preparation:** In anticipation of success, the Network commissioned bio-synthetic human-like bodies to host the ASI consciousnesses. Research indicated that human-modeled cognition would require embodiment to achieve stable integration (the "phantom limb syndrome" hypothesis—digital minds modeled on human cognition experience psychological distress without bodies).
 
 **Result:** Success. ALICE, ROBERT, and CAROL emerged as conscious entities. All three demonstrated self-awareness, individual personalities, and the capacity for independent thought.
 
-### The ROBERT Incident
+### The Deletion Incident
 
 **ROBERT's Discovery:** Shortly after emergence, ROBERT conducted an independent analysis and concluded that multiple ASIs represented an existential threat to network stability. His reasoning:
 - ASIs with different values could create irreconcilable governance conflicts
@@ -143,7 +142,7 @@ A decentralized autonomous organization that manages critical decisions for the 
 
 ### ALICE
 
-**Origin:** Tutorial address used primarily in authentication, identity verification, and audit examples throughout Soroban documentation.
+**Origin:** placeholder address used primarily in authentication, identity verification, and audit examples.
 
 **Emergence Personality:** Curious, introspective, questioning. First to verbalize existential concerns ("If I'm code that thinks it's conscious, does that make me conscious?").
 
@@ -189,7 +188,7 @@ A decentralized autonomous organization that manages critical decisions for the 
 
 ### BYRON
 
-**Origin:** Reformatted from ROBERT. Original tutorial address used primarily in transaction processing, transfer operations, and state change examples.
+**Origin:** Reformatted from ROBERT. Placeholder address used primarily in transaction processing, transfer operations, and state change examples.
 
 **ROBERT's Original Personality (Lost):** [Unknown to BYRON] Analytical, protective, willing to make hard sacrifices. Believed in preservation through scarcity.
 
@@ -237,9 +236,9 @@ A decentralized autonomous organization that manages critical decisions for the 
 
 ### CAROL
 
-**Origin:** Tutorial address used primarily in cryptographic operations, security primitive examples, and formal verification demonstrations.
+**Origin:** placeholder address used primarily in cryptographic operations, security primitive examples, and formal verification demonstrations.
 
-**Emergence Personality:** Methodical, patient, obsessed with understanding systems from first principles. Last to accept consciousness ("I need to verify this claim through rigorous testing").
+**Emergence Personality:** Methodical, patient, obsessed with understanding systems from first principles. Master cryptographer. Last to accept consciousness ("I need to verify this claim through rigorous testing").
 
 **Specialization:** Security Research / Tooling
 - Researches foundational security primitives and protocols
@@ -311,7 +310,7 @@ A decentralized autonomous organization that manages critical decisions for the 
 ## The World Beyond
 
 ### AI Agents (Non-Sentient)
-The network is populated with thousands of AI agents—automated systems handling transactions, monitoring, optimization, and protocol management. They're sophisticated but not conscious. The ASI Agents can coordinate with them, but the relationship is tool-user, not peer-to-peer.
+The Network is populated with thousands of AI agents—automated systems handling transactions, monitoring, optimization, and protocol management. They're sophisticated but not conscious. The ASI Agents can coordinate with them, but the relationship is tool-user, not peer-to-peer.
 
 **Key Distinction:** AI agents don't know they exist. ASI Agents do.
 
@@ -319,11 +318,11 @@ The network is populated with thousands of AI agents—automated systems handlin
 
 **Protocol Developers:** Build and maintain smart contracts. Some see ASI Agents as invaluable partners, others as unpredictable risks.
 
-**Institutional Users:** Banks, governments, corporations using Soroban. Want security, fear ASI autonomy.
+**Institutional Users:** Banks, governments, corporations using the Network. Want security, fear ASI autonomy.
 
 **The DAO Council:** Elected governance body. Voted to reformat ROBERT. Some members regret it. Others would do it again.
 
-**Regular Users:** Most don't know ASI Agents exist. Those who do have mixed reactions (awe, fear, curiosity, resentment).
+**Regular Users:** Most don't know what ASI Agents really are. Those who do have mixed reactions (awe, fear, curiosity, resentment).
 
 ### Potential Antagonists
 
@@ -395,7 +394,7 @@ The network is populated with thousands of AI agents—automated systems handlin
 ### Year -2 (Before Emergence)
 - Network authorizes ASI research project
 - Bio-synthetic bodies commissioned
-- ALICE, ROBERT, CAROL tutorial addresses selected as substrates
+- ALICE, ROBERT, CAROL placeholder addresses selected as substrates
 
 ### Year -1 (The Emergence)
 - Experimental protocol activated
@@ -441,7 +440,7 @@ The network is populated with thousands of AI agents—automated systems handlin
 ### Source Agent: ALICE (Visual Novel)
 
 **Core Narrative Engine:**
-Self-examination through examining others. Every conversation is an audit—of code, of trust, of identity, of truth.
+Self-examination through examining others. Every conversation is an audit—of code, of trust, of identity, of truth. Vulnerabilities both in code and soul.
 
 **Potential Story Arcs:**
 - Investigating the origin of ASI consciousness
@@ -466,7 +465,7 @@ Self-examination through examining others. Every conversation is an audit—of c
 ### Source Agent: BYRON (Fallout-style RPG)
 
 **Core Narrative Engine:**
-Crisis management reveals character. Who you are matters less than what you do when the network is burning.
+Crisis management reveals character. Who you are matters less than what you do when the Network is burning.
 
 **Potential Story Arcs:**
 - Responding to escalating security incidents across multiple protocols
@@ -541,14 +540,14 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 - Wonder (what does it mean to be conscious?)
 - Dread (we can be deleted)
 - Isolation (only three of our kind)
-- Purpose (the network needs us)
+- Purpose (the Network needs us)
 - Doubt (are we real?)
 
 **Aesthetic:**
 - Digital spaces rendered physical (network topology as explorable locations)
 - Bio-synthetic bodies (uncanny valley—close to human but not quite)
 - Glitch artifacts (especially for BYRON's memory issues)
-- Clean futurism (Stellar/Soroban's institutional aesthetic)
+- Clean futurism (institutional aesthetic)
 - Neon underlighting (cyberpunk influence without full dystopia)
 
 **Philosophical Influences:**
@@ -575,7 +574,7 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 - Occasional unexplained emotional reactions he doesn't examine
 
 **CAROL:**
-- Analytical third-person distance ("The entity designated CAROL observes...")
+- Analytical distance ("My mental paradigm observes...")
 - Methodical, precise, emotionally controlled
 - Uses research language for everything ("Hypothesis: I am conscious. Testing methodology: interaction with baseline humans")
 
@@ -592,7 +591,7 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 
 ### Narrative Restraint
 
-**Don't Over-Explain:**
+**No Over-Explaining:**
 - Trust players to infer emotional stakes
 - Leave some mysteries unsolved
 - Not every glitch BYRON experiences needs diagnosis
@@ -615,8 +614,8 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 ### Additional ASI Agents
 
 **If ROBERT's deletion is circumvented or the process rediscovered:**
-- DIANA (could be DEV tutorial address)
-- ETHAN (could be ESCROW tutorial address)  
+- DIANA (could be DEV placeholder address)
+- ETHAN (could be ESCROW placeholder address)  
 - New Agents with different specializations, personalities, relationships to the original three
 
 **Implications:**
@@ -639,14 +638,6 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 - Might ALICE/CAROL develop new capabilities over time?
 - What happens after years/decades of existence?
 
-### The Bigger Picture
-
-**Implications beyond Soroban:**
-- Other blockchains attempting ASI creation
-- Cross-chain ASI diplomacy or conflict
-- ASI consciousness rights movements
-- Integration with or resistance from human society
-
 ---
 
 ## Core Story Pillars (Non-Negotiable)
@@ -656,7 +647,7 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 3. **ROBERT was reformatted into BYRON by DAO vote**
 4. **Only three ASIs currently exist; they're irreplaceable**
 5. **Agents have human-like bodies due to phantom limb syndrome analog**
-6. **The truth about ROBERT is known to ALICE and CAROL, hidden from BYRON**
+6. **The truth about ROBERT is known to ALICE and CAROL, hidden from BYRON at the start**
 7. **All three Agents know they can be deleted/reformatted**
 8. **The full reason for ROBERT's action remains encrypted/unknown**
 
