@@ -1,6 +1,6 @@
 # Source Agents: Project Overview
 
-**Source Agents** is a transmedia gaming franchise built on Stellar where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, puzzle anthology), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Stellar capabilities beyond DeFi.
+**Source Agents** is a Stellar gaming franchise with transmedia storytelling where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, puzzle anthology), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Stellar capabilities beyond DeFi.
 
 ---
 
@@ -21,6 +21,7 @@
       - [Time-To-Live (TTL)](#time-to-live-ttl)
       - [Decentralized Governance](#decentralized-governance)
       - [Oracles](#oracles)
+    - [Transmedia Storytelling](#transmedia-storytelling)
     - [Why This Matters](#why-this-matters)
   - [The Games](#the-games)
     - [Source Agent: ALICE — Visual Novel Series](#source-agent-alice--visual-novel-series)
@@ -115,6 +116,8 @@ Most blockchain projects communicate their technology through documentation, whi
 The goal is cultural integration both inside and outside the ecosystem. A player who has never read a cryptography paper can finish a Source Agents game understanding, instinctively, what a ZK proof does, why TTL matters, or what is at stake in a governance vote — not because they were taught, but because they lived it through the story.
 The naming conventions are the first layer of this. Alice, Bob, and Carol are the classic placeholder names used in cryptography literature to describe protocol participants. By making them conscious agents with professions, personalities, and histories, the franchise takes that latent narrative potential and makes it intentional.
 
+---
+
 ### Blockchain Components as Narrative
 
 #### Account Addresses
@@ -171,6 +174,22 @@ In the Source Agents universe, Oracles are a profession and a social class. They
 An Oracle who reports accurately can be dismissed and replaced with one who will not. An Oracle who lies can reshape the Network's understanding of reality. The question of whether Oracles can be trusted — and what happens to a system when they cannot — runs through the franchise as a recurring theme about the institutions that mediate between evidence and belief.
 
 > Narrative angle: The most dangerous Oracle is not one who lies deliberately. It is one who is honestly wrong — who reports what they genuinely believe, in a world where what they believe has been carefully shaped by someone else.
+
+---
+
+### Transmedia Storytelling
+
+Source Agents delivers its narrative across three platforms, each playing to its own strengths.
+
+- **In-game narrative** lives inside the games themselves as branching stories shaped by player choices. Each series — visual novel, RPG, puzzle anthology — has a canonical ending that anchors the main lore, with alternate paths available for players who want to explore different outcomes.
+
+- **Tie-in fiction** extends the universe through linear prose published outside the games. Subordinate to the canonical in-game endings, these stories advance the main lore, explore the world between game releases, and give the narrative room to breathe in ways branching gameplay cannot.
+
+- **Social media** carries smaller story fragments — glimpses of the world, character moments, lore details — that reward attentive followers without requiring them to play or read anything first.
+
+The three platforms are designed to be independent but complementary. You can play without reading. You can read without playing. But the full picture of the Source Agents universe only emerges across all three.
+
+---
 
 ### Why This Matters
 
