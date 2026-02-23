@@ -1,6 +1,6 @@
 # Source Agents: Project Overview
 
-**Source Agents** is a Stellar gaming franchise with transmedia storytelling where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, puzzle anthology), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Stellar capabilities beyond DeFi.
+**Source Agents** is a Stellar gaming franchise with transmedia storytelling where three Artificial Sentient Intelligence defenders—ALICE, BYRON, and CAROL—protect the blockchain ecosystem from security threats. Each character leads their own game series in a distinct genre (visual novel, RPG, terminal thriller), creating an interconnected universe that pioneers narrative-driven Web3 entertainment while demonstrating Stellar capabilities beyond DeFi.
 
 ---
 
@@ -26,11 +26,11 @@
   - [The Games](#the-games)
     - [Source Agent: ALICE — Visual Novel Series](#source-agent-alice--visual-novel-series)
     - [Source Agent: BYRON — RPG Series](#source-agent-byron--rpg-series)
-    - [Source Agent: CAROL — Puzzle Anthology Series](#source-agent-carol--puzzle-anthology-series)
+    - [Source Agent: CAROL — Terminal Series](#source-agent-carol--terminal-series)
   - [Genre Differentiation \& Audience Appeal](#genre-differentiation--audience-appeal)
     - [Source Agent: ALICE — Proactive, Intimate, Contemplative](#source-agent-alice--proactive-intimate-contemplative)
     - [Source Agent: BYRON — Reactive, Exploration-Driven, Consequential](#source-agent-byron--reactive-exploration-driven-consequential)
-    - [Source Agent: CAROL — Foundational, Methodical, Systematic](#source-agent-carol--foundational-methodical-systematic)
+    - [Source Agent: CAROL — Detached, Adversarial, Asymmetric](#source-agent-carol--detached-adversarial-asymmetric)
     - [Cross-Game Integration](#cross-game-integration)
   - [Naming Convention \& Branding](#naming-convention--branding)
   - [Technical Implementation](#technical-implementation)
@@ -252,28 +252,28 @@ The technology is not the subject of these stories. It is the world the stories 
 
 ---
 
-### Source Agent: CAROL — Puzzle Anthology Series
+### Source Agent: CAROL — Terminal Series
 
-**Genre:** Logic Puzzle / Strategy (changing genre each release)  
-**Platform:** Browser (Depending on puzzle type—First Game: React + Vite + Stellar Scaffold + Framer Motion + Howler.js + Zustand)  
-**Reference Games:** Puzzle anthology—Papers Please → Opus Magnum → Baba Is You → The Witness, etc.  
+**Genre:** Terminal thriller
+**Platform:** Browser (First Game: React + Vite + Stellar Scaffold + Framer Motion + Howler.js + Zustand)
+**Reference Game:** Hacknet
 **Security Discipline:** Security Research / Tooling
 
 **Core Concept:**
-- Each game in the series uses a different puzzle genre
-- First game establishes Carol's character and research methodology
-- Subsequent games lighter on narrative, focused on puzzle mechanics
-- Each game explores a different security primitive or concept
+- The player never controls CAROL directly — they interact with her through a terminal or other interface tools
+- CAROL's detachment is shown through the UI itself, never stated in dialogue
+- The player is an outside collaborator — contractor, analyst, and so on — receiving tasks, data, and clipped feedback from an intelligence that processes them as data
+- The first game establishes the player/CAROL dynamic through adversarial attack simulations
 
 **On-Chain Integration:**
-- Verifiable puzzle solutions (leaderboards without trust)
-- Speedrun records
-- Optimal solution tracking
-- Community-created puzzles as NFTs
+- Verifiable attack/solution records (leaderboards without trust)
+- Speedrun and optimal execution tracking
+- Community-created scenarios as NFTs
+- CAROL's research findings minted as canonical lore artifacts
 
 **First Title:** *Source Agent: CAROL—Quantum Shift* (working title)
 
-**Player Experience:** Methodical problem-solving with escalating complexity. Players experience the satisfaction of building unbreakable systems through logic and systematic thinking.
+**Player Experience:** The player is always slightly off-balance — never certain whether CAROL is testing them, using them, or something else entirely. Her detachment is the mystery. The terminal is the only window into it.
 
 ---
 
@@ -291,11 +291,11 @@ The technology is not the subject of these stories. It is the world the stories 
 - **Pacing:** Episodic tension, high-pressure decisions
 - **Emotion:** Urgency, consequence, responsibility
 
-### Source Agent: CAROL — Foundational, Methodical, Systematic
-- **Audience:** Puzzle game fans, optimization enthusiasts, logic game players
-- **Gameplay:** Rule-based problem-solving, verifiable solutions
-- **Pacing:** Incremental difficulty, "aha!" moments
-- **Emotion:** Satisfaction, discovery, mastery
+### Source Agent: CAROL — Detached, Adversarial, Asymmetric
+- **Audience:** Hacking simulator fans, thriller enthusiasts, narrative mystery players
+- **Gameplay:** Terminal-based interaction with an intelligence that never fully reveals itself
+- **Pacing:** Methodical escalation, mounting uncertainty about the relationship dynamic
+- **Emotion:** Unease, curiosity, challenging
 
 ### Cross-Game Integration
 
@@ -372,9 +372,9 @@ The technology is not the subject of these stories. It is the world the stories 
 - Custom dialogue system
 
 **Source Agent: CAROL:**
-- React (for UI-heavy puzzles) or Phaser (for visual/physics puzzles)
-- Flexible architecture to support different puzzle genres per game
-- Stellar SDK for solution verification
+- React (terminal and interface UI)
+- Flexible interface architecture to support different UI paradigms per game
+- Stellar SDK for solution verification and lore artifact minting
 
 **Shared Infrastructure:**
 - Soroban smart contracts (Rust)
@@ -425,13 +425,13 @@ The technology is not the subject of these stories. It is the world the stories 
 
 **Deliverables:**
 - BYRON: Full first game (3-5 vaults, complete skill trees, faction system)
-- CAROL: First puzzle game (Papers Please-style, access control theme)
+- CAROL: First terminal thriller game (access control theme)
 - Narrative crossovers implemented (shared incident across games)
-- Community puzzle challenges for CAROL
+- Community hacking challenges for CAROL
 
 **Milestones:**
 - Month 13-14: BYRON polish and launch
-- Month 15-16: CAROL gameplay design and first puzzles
+- Month 15-16: CAROL gameplay design
 - Month 17-18: CAROL launch and crossover content
 
 ---
@@ -484,7 +484,7 @@ The technology is not the subject of these stories. It is the world the stories 
 - Pricing: Accessible (sub-$5 for most items), premium for rare collectibles
 
 **2. Tournament Entry Fees:**
-- CAROL puzzle competitions
+- CAROL hacking competitions
 - BYRON speedrun challenges
 - Community-organized events
 - Prize pools funded by entry fees (percentage to development)
@@ -506,7 +506,7 @@ The technology is not the subject of these stories. It is the world the stories 
 
 **Free Tier:**
 - Full access to core gameplay
-- Can complete all stories/puzzles
+- Can complete all stories
 - No pay-to-win mechanics
 - Optional wallet connection
 
@@ -531,7 +531,7 @@ The technology is not the subject of these stories. It is the world the stories 
 **Indie Game Enthusiasts:**
 - Love narrative-driven, genre-diverse games
 - Curious about Web3 but skeptical of crypto-games
-- Drawn to visual novels, classic RPGs, puzzle games
+- Drawn to visual novels, classic RPGs, hacking games
 - Will try Source Agents for gameplay, stay for ownership benefits
 
 **Security-Minded Builders:**
@@ -552,8 +552,8 @@ The technology is not the subject of these stories. It is the world the stories 
 - Nostalgic for isometric exploration and choice-driven narratives
 - May come for RPG, discover broader universe
 
-**Puzzle Game Enthusiasts:**
-- Attracted to Source Agent: CAROL's genre variety
+**Terminal Thriller Enthusiasts:**
+- Attracted to Source Agent: CAROL hacking simulator
 - Competitive optimizers and speedrunners
 - Leaderboards and verifiable solutions appeal to this demographic
 
@@ -691,7 +691,7 @@ The Network needs defenders. The defenders need stories. And the stories need pl
 
 **Franchise Name:** Source Agents  
 **Platform:** Stellar  
-**Genres:** Visual Novel (ALICE), RPG (BYRON), Puzzle Anthology (CAROL)  
+**Genres:** Visual Novel (ALICE), RPG (BYRON), Terminal Thriller (CAROL)  
 **Author and Main Dev:** Ricardo Pintos [(lokapal.eth)](https://app.ens.domains/lokapal.eth)  
 **Website:** [Lokapal](https://www.lokapal.xyz/en)  
 **Telegram:** [lokapalxyz](https://t.me/lokapalxyz)
