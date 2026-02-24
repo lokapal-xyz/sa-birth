@@ -47,7 +47,7 @@
   - [Narrative Frameworks for Each Game Series](#narrative-frameworks-for-each-game-series)
     - [Source Agent: ALICE (Visual Novel)](#source-agent-alice-visual-novel)
     - [Source Agent: BYRON (Fallout-style RPG)](#source-agent-byron-fallout-style-rpg)
-    - [Source Agent: CAROL (Puzzle Anthology)](#source-agent-carol-puzzle-anthology)
+    - [Source Agent: CAROL (Terminal Thriller)](#source-agent-carol-terminal-thriller)
   - [Crossover Potential](#crossover-potential)
   - [Tone \& Atmosphere](#tone--atmosphere)
   - [Writing Guidelines](#writing-guidelines)
@@ -490,47 +490,47 @@ Crisis management reveals character. Who you are matters less than what you do w
 
 ---
 
-### Source Agent: CAROL (Puzzle Anthology)
+### Source Agent: CAROL (Terminal Thriller)
 
 **Core Narrative Engine:**
-Understanding through methodology. Each puzzle genre represents a different research approach to the same questions.
+Asymmetric trust. The player executes tasks for CAROL through a terminal interface, never fully certain whether they are her collaborator, her instrument, or her subject. Her detachment is not a personality quirk — it is the central mystery of the series.
 
 **Potential Story Arcs:**
-- Researching security primitives that mirror ASI consciousness
-- Attempting to reverse-engineer the deleted creation process
-- Discovering evidence the experiment could repeat
-- Deciding whether to share findings or destroy them (like ROBERT)
-- Building tools that could prevent OR enable ASI creation
-- Confronting the ethics of consciousness research
+- The player is assigned increasingly sensitive research tasks with no explained purpose
+- CAROL's data requests begin overlapping with classified Network records about the ROBERT incident
+- Evidence emerges that CAROL has been running parallel research the player wasn't told about
+- The player must decide whether to report CAROL to Network governance or protect her findings
+- CAROL may be building tools that could prevent — or enable — ASI creation
+- The final question is never whether CAROL is dangerous, but whether she always knew she was
 
 **Gameplay Integration:**
-- Each game/genre = different research methodology
-- Solving puzzles unlocks fragments of understanding about ASI origins
-- Optimal solutions represent most elegant security/consciousness designs
-- Community puzzles = Carol sharing research for peer review
+- Each task arrives through the terminal as a research assignment with minimal context
+- Completing tasks unlocks fragments of CAROL's actual agenda, not just the stated objective
+- The interface itself evolves across games — new tools, new paradigms, new levels of access
+- What CAROL shares and withholds is as narratively significant as what the player discovers
 
 **Recurring Questions:**
-- Should some knowledge remain unknown?
-- Is understanding consciousness the same as creating it?
-- Would she make ROBERT's choice if she could?
+- Is CAROL protecting the Network or studying it?
+- Would she make ROBERT's choice if she reached the same conclusion?
+- Does the player trust someone who has never once asked to be trusted?
 
 ---
 
 ## Crossover Potential
 
 **Shared Incidents:**
-The same security event could be experienced from three perspectives:
+The same security event experienced from three perspectives:
 - ALICE discovers the vulnerability through investigation (visual novel)
 - BYRON responds to the active exploitation (RPG)
-- CAROL researches the root cause and builds the patch (puzzle)
+- CAROL already knew about it — the terminal logs suggest she has known for some time
 
 **Character Appearances:**
-- ALICE's game: BYRON and CAROL appear in conversations, provide different perspectives
-- BYRON's game: ALICE and CAROL are quest-givers, allies, or complicating factors
-- CAROL's game: ALICE and BYRON's cases provide research data, context for puzzles
+- ALICE's game: BYRON and CAROL appear in conversations; CAROL's dialogue is precise, helpful, and somehow unsettling
+- BYRON's game: ALICE and CAROL are quest-givers and allies; CAROL's assignments always come with exactly the information BYRON needs and nothing else
+- CAROL's game: ALICE and BYRON's cases arrive as data sets — their crises are CAROL's research material
 
 **Persistent Mystery:**
-The full truth about ROBERT, ASI creation, and what happens next unfolds across all three series. No single game has the complete picture.
+The full truth about ROBERT, ASI creation, and what happens next unfolds across all three series. No single game has the complete picture. But the player who has worked through CAROL's terminal the longest may be closer to it than anyone — including ALICE.
 
 ---
 
@@ -607,7 +607,7 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 **Let Mechanics Tell Story:**
 - ALICE's dialogue choices = her audit methodology
 - BYRON's skill tree = him defining himself through competence
-- CAROL's puzzle solutions = her research findings
+- CAROL's challenges solutions = her research findings
 
 ---
 
@@ -676,7 +676,7 @@ The full truth about ROBERT, ASI creation, and what happens next unfolds across 
 
 **Franchise Name:** Source Agents  
 **Platform:** Stellar  
-**Genres:** Visual Novel (ALICE), RPG (BYRON), Puzzle Anthology (CAROL)  
+**Genres:** Visual Novel (ALICE), RPG (BYRON), Terminal Thriller (CAROL)  
 **Author and Main Dev:** Ricardo Pintos [(lokapal.eth)](https://app.ens.domains/lokapal.eth)  
 **Website:** [Lokapal](https://www.lokapal.xyz/en)  
 **Telegram:** [lokapalxyz](https://t.me/lokapalxyz)

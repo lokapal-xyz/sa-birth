@@ -181,7 +181,7 @@ An Oracle who reports accurately can be dismissed and replaced with one who will
 
 Source Agents delivers its narrative across three platforms, each playing to its own strengths.
 
-- **In-game narrative** lives inside the games themselves as branching stories shaped by player choices. Each series — visual novel, RPG, puzzle anthology — has a canonical ending that anchors the main lore, with alternate paths available for players who want to explore different outcomes.
+- **In-game narrative** lives inside the games themselves as branching stories shaped by player choices. Each series — visual novel, RPG, terminal thriller — has a canonical ending that anchors the main lore, with alternate paths available for players who want to explore different outcomes.
 
 - **Tie-in fiction** extends the universe through linear prose published outside the games. Subordinate to the canonical in-game endings, these stories advance the main lore, explore the world between game releases, and give the narrative room to breathe in ways branching gameplay cannot.
 

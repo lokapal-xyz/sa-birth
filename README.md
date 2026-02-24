@@ -187,7 +187,7 @@ SA:BIRTH is a narrative prequel and the entry point to a larger franchise:
 | Source Agent: BIRTH | ALICE / ROBERT / CAROL | Maze calibration | ✅ **This game** |
 | Source Agent: ALICE | ALICE | Visual novel | 🔜 In development |
 | Source Agent: BYRON | BYRON | Fallout-style RPG | 📋 Planned |
-| Source Agent: CAROL | CAROL | Puzzle anthology | 📋 Planned |
+| Source Agent: CAROL | CAROL | Terminal thriller | 📋 Planned |
 
 *Three characters. Three genres. Three security disciplines. One universe.*
 
