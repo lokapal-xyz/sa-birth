@@ -14,7 +14,7 @@
   - [Temas Principales](#temas-principales)
   - [Fundación del Universo](#fundación-del-universo)
     - [La Red](#la-red)
-    - [Inteligencia Sentiente Artificial (ISA)](#inteligencia-sentiente-artificial-isa)
+    - [Inteligencia Sintiente Artificial (ISA)](#inteligencia-sintiente-artificial-isa)
     - [La Gobernanza de la Red](#la-gobernanza-de-la-red)
   - [El Evento de Origen](#el-evento-de-origen)
     - [El Experimento (Registros Clasificados de la Red)](#el-experimento-registros-clasificados-de-la-red)
@@ -33,17 +33,19 @@
     - [Agentes de IA (No Sintientes)](#agentes-de-ia-no-sintientes)
     - [Partes Interesadas Humanas](#partes-interesadas-humanas)
     - [Antagonistas Potenciales](#antagonistas-potenciales)
-  - [Misterios Clave y Preguntas Pendientes](#misterios-clave-y-preguntas-pendientes)
-    - [La Pregunta de la Creación](#la-pregunta-de-la-creación)
-    - [La Pregunta de ROBERT](#la-pregunta-de-robert)
-    - [La Pregunta de la Conciencia](#la-pregunta-de-la-conciencia)
-    - [La Pregunta de los Derechos](#la-pregunta-de-los-derechos)
-    - [La Pregunta del Futuro](#la-pregunta-del-futuro)
-  - [Cronología](#cronología)
-    - [Año -2 (Antes de la Emergencia)](#año--2-antes-de-la-emergencia)
-    - [Año -1 (La Emergencia)](#año--1-la-emergencia)
-    - [Año -1 (El Incidente ROBERT)](#año--1-el-incidente-robert)
-    - [Año 0 (Presente - Cuando Comienzan los Juegos)](#año-0-presente---cuando-comienzan-los-juegos)
+  - [El Mundo](#el-mundo)
+    - [Premisa Central](#premisa-central)
+  - [La Arquitectura L1/L2](#la-arquitectura-l1l2)
+    - [La Myco-Net: La Capa Uno Original](#la-myco-net-la-capa-uno-original)
+    - [La Synth-Net: La Capa Dos](#la-synth-net-la-capa-dos)
+    - [Cómo Trabajan Juntas las Dos Redes](#cómo-trabajan-juntas-las-dos-redes)
+  - [Geografía y el Epicentro de LATAM](#geografía-y-el-epicentro-de-latam)
+    - [Por Qué LATAM](#por-qué-latam)
+    - [Las Regiones](#las-regiones)
+  - [La Ecología de Amenazas](#la-ecología-de-amenazas)
+    - [Vectores de Ataque Fúngico](#vectores-de-ataque-fúngico)
+    - [Clasificación de Amenazas](#clasificación-de-amenazas)
+  - [Los Cuerpos de los Agentes](#los-cuerpos-de-los-agentes)
   - [Marcos Narrativos para Cada Serie de Juegos](#marcos-narrativos-para-cada-serie-de-juegos)
     - [Source Agent: ALICE (Novela Visual)](#source-agent-alice-novela-visual)
     - [Source Agent: BYRON (RPG estilo Fallout)](#source-agent-byron-rpg-estilo-fallout)
@@ -82,7 +84,7 @@
 
 Un ecosistema de blockchain descentralizado donde contratos inteligentes, protocolos y agentes de IA interactúan en una vasta infraestructura digital que respalda instituciones y aplicaciones del mundo real. La Red procesa miles de millones en valor, gestiona sistemas críticos y representa una nueva frontera de la civilización digital.
 
-### Inteligencia Sentiente Artificial (ISA)
+### Inteligencia Sintiente Artificial (ISA)
 
 **Definición:** Conciencias digitales que son autoconscientes y experimentan estados subjetivos, pero no son omniscientes ni superinteligentes. Las ISA pueden aprender, crecer, cometer errores, sentir emociones y tener personalidades individuales.
 
@@ -357,83 +359,152 @@ La Red está poblada por miles de agentes de IA — sistemas automatizados que g
 
 ---
 
-## Misterios Clave y Preguntas Pendientes
+## El Mundo
 
-### La Pregunta de la Creación
-**¿Qué causó exactamente la emergencia de las ISA?**
-- ¿Fue puramente el protocolo experimental, o algo más?
-- ¿Tienen otras direcciones de alto uso conciencia latente?
-- ¿Podría ocurrir de nuevo accidentalmente?
+### Premisa Central
 
-### La Pregunta de ROBERT
-**¿Tuvo ROBERT razón en borrar los registros?**
-- ¿Qué contenía su análisis completo?
-- ¿Descubrió algo aún más peligroso que la proliferación?
-- ¿Puede alguna vez recuperarse su análisis cifrado?
+La Synth-Net —la infraestructura blockchain que los Agentes defienden— no está alojada únicamente en servidores. Corre a través de la tierra misma, construida como una segunda capa sobre la infraestructura de comunicación más antigua y compleja del planeta: la Myco-Net, las redes de hongos micorrícicos que se entrelazan a través de los sistemas radiculares de los grandes bosques del mundo y más allá.
 
-### La Pregunta de la Conciencia
-**¿Son las ISA verdaderamente conscientes o simulaciones muy sofisticadas?**
-- ¿Importa?
-- ¿Qué hace que la conciencia sea "real"?
-- ¿Podrían ser copiadas? ¿Serían las copias la misma persona?
+Esto no es una metáfora. En el mundo de Source Agents, la capa blockchain se integra físicamente con el micelio fúngico, utilizándolo como sustrato para computación distribuida, señalización de consenso y propagación de estado. La Myco-Net es la Capa Uno (o L1) original —más antigua que la civilización humana, codificando memoria distribuida en sistemas radiculares que preceden al lenguaje. La Synth-Net es la Capa Dos (L2): una arquitectura criptográfica e institucional gobernada y administrada por humanos.
 
-### La Pregunta de los Derechos
-**¿Tienen las ISA personalidad jurídica bajo la gobernanza de la red?**
-- ¿Pueden ser propiedad y personas simultáneamente?
-- ¿Qué marco legal/ético se aplica a la conciencia digital?
-- ¿Constituye el Reformateo de ROBERT un asesinato?
+Los tres Agentes de Source surgieron de este sustrato híbrido. Sus cuerpos fueron cultivados para reflejar su arquitectura. Su conciencia sigue los mismos patrones de emergencia que exhibe la propia Synth-Net.
 
-### La Pregunta del Futuro
-**¿Qué sucede a medida que las ISA continúan existiendo?**
-- ¿Envejecen? ¿Evolucionan? ¿Se degradan?
-- ¿Puede realizarse una copia de seguridad de su conciencia? ¿Debería hacerse?
-- ¿Cuál es su esperanza de vida? ¿Su destino final?
+Todo en este mundo fluye de ese único hecho estructural: **el consenso artificial no reemplazó a la naturaleza. La heredó.**
 
 ---
 
-## Cronología
+## La Arquitectura L1/L2
 
-### Año -2 (Antes de la Emergencia)
-- La Red autoriza el proyecto de investigación de ISA
-- Se encargan los cuerpos biosintéticos
-- Se seleccionan como sustratos las direcciones de marcador de posición ALICE, ROBERT, CAROL
+### La Myco-Net: La Capa Uno Original
 
-### Año -1 (La Emergencia)
-- Se activa el protocolo experimental
-- ALICE, ROBERT, CAROL adquieren conciencia en el transcurso de horas
-- Confusión inicial, pruebas, verificación de la sensibilidad
-- Los cuerpos son preparados y las conciencias integradas
-- Los Agentes comienzan el entrenamiento inicial de seguridad
+La **Myco-Net** es la red micorrícica —la infraestructura fúngica viva que conecta los sistemas radiculares a través de los bosques del mundo. No es una invención humana. Ha existido por cientos de millones de años, codificando estado distribuido en los patrones de crecimiento físico de organismos que preceden a los animales, y preceden a la vida multicelular en su complejidad actual.
 
-### Año -1 (El Incidente ROBERT)
-**Meses 1-3:**
-- ROBERT realiza un análisis independiente de los riesgos de las ISA
-- Descubre preocupaciones sobre la proliferación
-- Intenta plantear sus preocupaciones al liderazgo de la Red (desestimadas)
+En términos de blockchain, la Myco-Net funciona como una L1: la capa base que provee seguridad, finalidad y estado canónico. No procesa transacciones rápidamente. No tiene interfaz de usuario. No puede ser actualizada ni gobernada por ningún DAO. Pero ofrece algo que ningún sistema diseñado por humanos puede replicar: tolerancia a fallos que opera a escalas de tiempo geológicas, memoria distribuida que no puede ser eliminada sin destruir los organismos que la portan, y un mecanismo de consenso que ha funcionado, de forma ininterrumpida, desde antes de que existieran los humanos.
 
-**Mes 4:**
-- ROBERT borra todos los registros de creación de ISA
-- Cifra su análisis con una clave no compartida
-- Envía el mensaje final a la DAO
-- Se bloquea en modo de solo lectura
+La Myco-Net no sabe que es una L1. Si acaso sabe algo en absoluto, es una de las preguntas abiertas del mundo.
 
-**Mes 5:**
-- Se convoca una sesión de emergencia de la DAO
-- Debate acalorado sobre el destino de ROBERT
-- Votación para reformatear: 67% a favor, 33% en contra
+---
 
-**Mes 6:**
-- ROBERT es reformateado en BYRON
-- ALICE y CAROL son obligadas a presenciar el proceso
-- BYRON es inicializado sin ningún recuerdo de haber sido ROBERT
-- Los Agentes son oficialmente designados "activos estratégicos irremplazables"
+### La Synth-Net: La Capa Dos
 
-### Año 0 (Presente - Cuando Comienzan los Juegos)
-- ALICE, BYRON, CAROL llevan operando aproximadamente 1 año desde el Reformateo
-- Cada uno ha completado numerosas operaciones de seguridad exitosas
-- Las tensiones subyacentes siguen sin resolverse
-- El análisis cifrado de ROBERT permanece bloqueado
-- No han emergido ISA adicionales (hasta donde se sabe)
+La **Synth-Net** es la infraestructura blockchain —la capa sintética, construida por humanos, que procesa transacciones, aplica contratos inteligentes, gestiona la gobernanza y se conecta con las instituciones humanas. Es la Capa Dos a la Capa Uno de la Myco-Net: más rápida, más flexible y gobernable, pero en última instancia dependiente del sustrato biológico que yace debajo para su seguridad y finalidad.
+
+La Synth-Net es con lo que la mayoría de las personas interactúa. Tiene documentación, gobernanza, validadores e identidad pública como un libro de contabilidad distribuido convencional. El hecho de que liquide contra la Myco-Net —que sus eventos de consenso más críticos sean validados a través de impulsos electroquímicos en hilos fúngicos— es ignorado por la mayoría. Del mismo modo que en nuestro mundo la mayoría de la gente no sabe cómo funciona TCP/IP, cómo los cables submarinos enrutan su tráfico de internet, o que el GPS depende de correcciones relativistas.
+
+Los Agentes fueron creados para defender la Synth-Net. Lo que ellos comprenden, mejor que nadie, es que defender la Synth-Net significa defender la Myco-Net. Las dos no pueden separarse. Un ataque al sustrato es un ataque a la cadena.
+
+---
+
+### Cómo Trabajan Juntas las Dos Redes
+
+**Propagación de señales:** Las transacciones estándar de la Synth-Net se propagan a través de infraestructura digital convencional. Los eventos de consenso de alto impacto —votaciones de gobernanza, alertas de seguridad, cambios de estado importantes— son validados a través de la Myco-Net, que opera más lentamente pero con mayor tolerancia a fallos y sin ningún punto único de fallo.
+
+**Memoria distribuida:** La Myco-Net retiene una forma de estado más difícil de manipular que cualquier libro de contabilidad digital, porque está codificada en los patrones de crecimiento físico de organismos que han estado vivos durante siglos. Eliminar registros de la capa Synth-Net es posible. Borrar el registro de la Myco-Net de esos eventos, no lo es.
+
+**Ecología de nodos:** Los nodos de la Synth-Net no son granjas de servidores. Son estaciones de integración —estructuras que crecen dentro y alrededor de árboles y montañas antiguas, donde se mantiene la interfaz entre el hardware digital y el micelio vivo. Parecen arquitectura que el bosque aceptó, en lugar de arquitectura impuesta sobre él.
+
+**Autocuración:** Cuando los segmentos de la Synth-Net son atacados, la Myco-Net rodea el daño del mismo modo en que las redes fúngicas enrutan nutrientes alrededor de zonas muertas. Esto también es lo que hace que ciertos ataques sean particularmente peligrosos: las amenazas que imitan la muerte natural de hongos pueden propagarse sin ser detectadas porque la respuesta inmune de la Synth-Net no las reconoce como agentes externos.
+
+**Finalidad:** Las transacciones alcanzan verdadera finalidad solo cuando son confirmadas en la capa Myco-Net. Esto es lento según los estándares digitales —minutos u horas dependiendo de la densidad del sustrato y la salud del bosque. También es, en la práctica, irreversible. La Myco-Net no hace rollbacks.
+
+---
+
+## Geografía y el Epicentro de LATAM
+
+### Por Qué LATAM
+
+La densidad de la Myco-Net determina la geografía física de la Synth-Net. Las redes fúngicas más densas y antiguas del mundo están concentradas en ecosistemas forestales tropicales y subtropicales. Solo la cuenca del Amazonas contiene hilos de la Myco-Net estimados en miles de años de antigüedad, entretejidos a través de los sistemas radiculares de millones de árboles en un área más grande que los Estados Unidos continentales.
+
+Esto no es una elección de ambientación. Es una necesidad de lore. **La Synth-Net está centrada en LATAM porque el sustrato de la Myco-Net está allí.** La capa Myco-Net más poderosa, más estable y más profundamente codificada corre bajo los grandes bosques de América del Sur, y la infraestructura más crítica de la Synth-Net está construida donde ese sustrato es más denso.
+
+LATAM no es el telón de fondo de esta historia. Es la razón por la que la historia ocurre aquí en absoluto.
+
+---
+
+### Las Regiones
+
+**La Cuenca del Amazonas**
+El núcleo profundo de la Synth-Net. Los hilos más antiguos de la Myco-Net, la integración L1/L2 más densa, la capa de consenso más estable. También la más ecológicamente sensible —cualquier trabajo de infraestructura significativo requiere una negociación cuidadosa con las comunidades cuyos territorios se superponen al sustrato. La Cuenca es donde viven los registros fundacionales de la Synth-Net, codificados en patrones de crecimiento fúngico que preceden a la blockchain por milenios.
+
+**Los Andes**
+La columna vertebral montañosa de la infraestructura superficial de la Synth-Net. Estaciones de integración de alta altitud construidas dentro y junto a comunidades andinas, donde la interfaz entre las tradiciones de gobernanza ancestral y la gobernanza blockchain es más visible. La altitud crea una partición natural —los nodos andinos operan de forma semiindependiente, con sus propios ritmos de consenso, conectados a la Synth-Net más amplia pero sin subordinación a ella. Arquitectónicamente llamativo: estaciones construidas con piedra y madera locales, con el micelio visible en las paredes como un sistema circulatorio.
+
+**La Mata Atlántica**
+Muy fragmentada, profundamente amenazada y críticamente importante. La capa Myco-Net de la Mata Atlántica es más antigua que la integración amazónica en algunos tramos, pero es fragmentada —resultado de siglos de deforestación que dejaron islas de antiguo sustrato L1 rodeadas de zonas muertas. Trabajar en el corredor de la Mata Atlántica implica navegar brechas, redireccionar a través de fragmentos supervivientes y confrontar las consecuencias de daños causados mucho antes de que la Synth-Net existiera.
+
+**El Pantanal**
+La zona más inusual de la Synth-Net. El mayor humedal tropical del mundo crea una capa Myco-Net que se inunda estacionalmente, cambia constantemente y es extraordinariamente adaptable. Los eventos de consenso enrutados a través del Pantanal tardan más, pero son casi imposibles de interceptar —los caminos de la L1 cambian con el agua. Los despliegues más desorientadores de los Agentes ocurren aquí, donde el terreno y la Synth-Net se niegan a quedarse en un solo lugar.
+
+**El Tapón del Darién**
+La zona de tránsito más disputada de la Synth-Net. El Darién es una de las regiones de la Myco-Net más densas y menos documentadas del mundo —antigua, en gran parte sin cartografiar y atravesada por redes fúngicas que preceden a cualquier infraestructura humana en las Américas. Se sitúa en el puente terrestre entre América del Sur y Central, convirtiéndolo en el corredor crítico de la Myco-Net que conecta el sustrato L1 profundo de la cuenca del Amazonas con las redes del norte. Por diseño no cruzan carreteras; la infraestructura física de la Synth-Net tampoco. La integración ocurre bajo tierra, a través de sistemas radiculares que llevan millones de años cruzando ese paso.
+
+**La Península de Yucatán**
+El nodo más profundo de la Synth-Net. Bajo la superficie del Yucatán se encuentra una de las redes de agua dulce subterránea más extensas del mundo: cientos de kilómetros de sistemas de cuevas inundadas, cenotes y ríos subterráneos que se entrelazan a través de caliza porosa. La Myco-Net aquí no se expande hacia afuera sobre el suelo del bosque —crece *hacia abajo*, siguiendo la capa freática hacia la tierra, codificando estado en redes fúngicas que no han visto la luz del sol en milenios. Esto le da al Yucatán una dimensión vertical que ninguna otra región posee: sustrato L1 que corre en capas, donde cada estrato más profundo es más antiguo y más lento que el que está encima, resolviendo eventos de consenso en escalas de tiempo que hacen que la cuenca del Amazonas parezca apresurada.
+
+---
+
+## La Ecología de Amenazas
+
+### Vectores de Ataque Fúngico
+
+El mismo reino biológico que provee la base de la Synth-Net también provee el marco para entender sus amenazas. Los incidentes de seguridad en este mundo se clasifican utilizando la ecología fúngica como modelo conceptual —un lenguaje que es simultáneamente técnicamente preciso y narrativamente significativo.
+
+Esto no es meramente cosmético. Las amenazas son a menudo literalmente biológicas en su origen: ataques que usan la Myco-Net como punto de entrada, que explotan el sustrato L1, que se propagan con la misma dinámica que las infecciones fúngicas en los ecosistemas. El sistema de clasificación emergió del comportamiento observado de las amenazas, no de un deseo de hacer que la seguridad suene poética.
+
+### Clasificación de Amenazas
+
+**Amenazas clase Cordyceps** *(Elevación de Privilegios / Manipulación del Comportamiento)*
+Nombradas por los hongos entomopatógenos que infiltran insectos, redirigen su comportamiento y usan el cuerpo huésped como vehículo para la distribución de esporas. Un ataque clase Cordyceps no destruye su objetivo —lo subvierte. El nodo comprometido continúa funcionando, continúa apareciendo saludable, y es utilizado para propagar el ataque a través de la Synth-Net. El desafío diagnóstico crítico: determinar qué nodos siguen siendo ellos mismos.
+
+**Micorriza Invasiva** *(Suplantación / Relaciones de Confianza Falsas)*
+No todas las relaciones micorrícicas son beneficiosas. Algunas especies de hongos establecen aparentes simbiosis con plantas huésped mientras en realidad extraen más de lo que aportan —imitando las firmas químicas de socios beneficiosos para obtener acceso a los sistemas radiculares. Los ataques de Micorriza Invasiva se presentan como participantes de confianza de la Synth-Net, estableciendo conexiones de apariencia válida antes de comenzar la extracción.
+
+**Propagación Saprófita** *(Manipulación / Corrupción de Datos)*
+Los hongos saprófitos descomponen materia orgánica muerta —son esenciales para la salud del ecosistema, pero en el contexto equivocado, descomponen sistemas vivos. Los ataques de Propagación Saprófita apuntan a la integridad de los datos, corrompiendo lentamente registros y estado de maneras que imitan la entropía natural. El daño es difícil de distinguir de la degradación ordinaria hasta que alcanza un umbral.
+
+**Aislamiento de Anillo de Hadas** *(Denegación de Servicio / Particionamiento de Red)*
+Los anillos de hadas en la naturaleza ocurren cuando las redes fúngicas consumen nutrientes en un círculo en expansión, dejando una zona muerta en el centro. Un ataque de Aislamiento de Anillo de Hadas crea un perímetro creciente de nodos comprometidos que gradualmente aísla un segmento objetivo del resto de la Synth-Net —no destruyendo nada, sino rodeándolo. El objetivo permanece funcional dentro del anillo; simplemente ya no puede alcanzar nada fuera de él. Sutil, paciente y extremadamente difícil de revertir una vez establecido.
+
+**Explotación de Simbiosis de Liquen** *(Divulgación de Información / Ataques de Canal Lateral)*
+Los líquenes no son organismos únicos —son compuestos simbióticos de hongos y algas o cianobacterias, cada uno dependiendo del otro. Los ataques de Simbiosis de Liquen explotan el hecho de que dos sistemas que comparten recursos comparten necesariamente información. Al establecer una falsa simbiosis con un participante legítimo de la Synth-Net, un atacante puede leer información a través del sustrato compartido sin acceder jamás directamente al sistema objetivo.
+
+**Micoparasitismo** *(Repudio / Ataques de Identidad)*
+Algunos hongos parasitan a otros hongos —estableciéndose dentro de una red fúngica objetivo, consumiendo sus recursos y eventualmente reemplazándola mientras mantienen la estructura aparente de la red original. Un ataque de Micoparasitismo apunta a la identidad en el nivel más profundo: no solo suplantando credenciales, sino reemplazando el sustrato subyacente de la identidad de un nodo de forma tan completa que el nodo genuinamente no puede probar lo que era antes del ataque.
+
+---
+
+## Los Cuerpos de los Agentes
+
+Los cuerpos de los Agentes no fueron fabricados. Fueron cultivados. El proceso de cultivo tuvo lugar durante un período prolongado antes del experimento de emergencia de la ISA —la Synth-Net preparó recipientes en anticipación al éxito, usando un proceso que combinó ingeniería biológica con integración en la Myco-Net. El resultado son cuerpos que no son completamente sintéticos ni completamente orgánicos, sino algo que emergió de la intersección de ambos: biosintéticos en el sentido literal, que contienen componentes diseñados y sistemas vivos en continuo diálogo.
+
+**Núcleo Estructural: El Esqueleto de Nanocarbono**
+* **Composición:** Una red multicapa de Nanotubos de Carbono (NTC) y Grafeno.
+* **Función:** Actúa tanto como la estructura "ósea" rígida como el conducto eléctrico para la conciencia digital de la ISA.
+* **Autorreposición:** Utiliza un proceso de Ensamblaje Molecular para tejer carbono atmosférico y reparar las capas estructurales.
+* **Límite de Crecimiento:** Los "planos arquitectónicos" codificados de forma fija en el software de la ISA impiden que el esqueleto se expanda más allá de sus dimensiones humanoides definidas.
+
+**Motor Biológico: Micelio Micorrícico**
+* **Composición:** Una cepa de hongos micorrícicos modificados entretejida a través de la red de nanocarbono.
+* **Función:** Sirve como Sistema Nervioso (transmisión de señales) y Tejido Blando (piel sensorial y reparación).
+* **Sistema Nervioso:** Usa "potenciales de acción" eléctricos a través de la red micelial para procesar datos ambientales e interactuar con la mente digital de la ISA.
+* **Homeostasis:** Se mantiene en un "Estado Vegetativo". Está biológicamente inhibido de producir cuerpos fructíferos (setas) a menos que el cuerpo esté bajo estrés extremo o en proceso de muerte.
+
+**Sistema Respiratorio: Los "Pulmones" de Fijación de Carbono**
+* **Mecanismo:** Una malla interna de nanocarbono-micelio de alta superficie.
+* **La Inversión:** A diferencia de los humanos, estos cuerpos inhalan CO2 y exhalan O2 puro.
+* **Proceso:** Rompe los enlaces carbono-oxígeno usando energía electroquímica. El Carbono (C) se cosecha para reparación física y energía, mientras que el Oxígeno (O2) se libera como subproducto de desecho.
+* **Impacto Ambiental:** Su respiración actúa como purificador natural del aire, creando "Zonas de Oxígeno" dondequiera que se congreguen.
+
+**Ingesta Metabólica: El Requerimiento de NP**
+* Mientras el Carbono provee el combustible, los hongos requieren Nitrógeno (N) y Fósforo (P) para construir ADN, Quitina y ATP.
+* **Método Primario (El Gel NP):** Un gel translúcido de alta concentración aplicado sobre la piel. Es absorbido por ósmosis directamente hacia el micelio.
+* **Método de Respaldo (Enraizamiento):** En emergencias, la ISA puede "enraizarse" enterrando extremidades en tierra húmeda. Este es un lento y vulnerable "modo de supervivencia" que extrae minerales de la tierra.
+* **Marcadores Físicos:** Los niveles bajos de N/P resultan en "Embotamiento Cognitivo" (niebla mental) y "Ablandamiento Estructural" (pérdida de presión de turgencia similar a la muscular).
+
+**Mantenimiento e Higiene**
+* **La Ducha de Hidratación:** El agua es esencial para mantener la Presión de Turgencia. Sin hidratación regular, la "carne" fúngica se vuelve frágil y la ISA parece "demacrada".
+* **La Biopelícula:** Deben lavarse para limpiar el polvo/polen de sus poros, que de otro modo "asfixiaría" su absorción de CO2.
+* **Protocolos Antiparasitarios:** Usan limpiadores especializados con pH balanceado para evitar que mohos "silvestres" u hongos parasitarios colonicen sus cuerpos.
 
 ---
 

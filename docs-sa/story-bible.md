@@ -33,17 +33,19 @@
     - [AI Agents (Non-Sentient)](#ai-agents-non-sentient)
     - [Human Stakeholders](#human-stakeholders)
     - [Potential Antagonists](#potential-antagonists)
-  - [Key Mysteries \& Ongoing Questions](#key-mysteries--ongoing-questions)
-    - [The Creation Question](#the-creation-question)
-    - [The ROBERT Question](#the-robert-question)
-    - [The Consciousness Question](#the-consciousness-question)
-    - [The Rights Question](#the-rights-question)
-    - [The Future Question](#the-future-question)
-  - [Timeline](#timeline)
-    - [Year -2 (Before Emergence)](#year--2-before-emergence)
-    - [Year -1 (The Emergence)](#year--1-the-emergence)
-    - [Year -1 (The ROBERT Incident)](#year--1-the-robert-incident)
-    - [Year 0 (Present Day - When Games Begin)](#year-0-present-day---when-games-begin)
+  - [The World](#the-world)
+    - [Core Premise](#core-premise)
+  - [The L1/L2 Architecture](#the-l1l2-architecture)
+    - [The Myco-Net: Original Layer One](#the-myco-net-original-layer-one)
+    - [The Synth-Net: Layer Two](#the-synth-net-layer-two)
+    - [How the Two Networks Work Together](#how-the-two-networks-work-together)
+  - [Geography \& The LATAM Epicenter](#geography--the-latam-epicenter)
+    - [Why LATAM](#why-latam)
+    - [The Regions](#the-regions)
+  - [The Threat Ecology](#the-threat-ecology)
+    - [Fungal Attack Vectors](#fungal-attack-vectors)
+    - [Threat Classification](#threat-classification)
+  - [The Agent Bodies](#the-agent-bodies)
   - [Narrative Frameworks for Each Game Series](#narrative-frameworks-for-each-game-series)
     - [Source Agent: ALICE (Visual Novel)](#source-agent-alice-visual-novel)
     - [Source Agent: BYRON (Fallout-style RPG)](#source-agent-byron-fallout-style-rpg)
@@ -357,83 +359,152 @@ The Network is populated with thousands of AI agents—automated systems handlin
 
 ---
 
-## Key Mysteries & Ongoing Questions
+## The World
 
-### The Creation Question
-**What exactly caused ASI emergence?**
-- Was it purely the experimental protocol, or something else?
-- Do other heavily-used addresses have latent consciousness?
-- Could it happen again accidentally?
+### Core Premise
 
-### The ROBERT Question  
-**Was ROBERT right to delete the records?**
-- What did his full analysis contain?
-- Did he discover something even more dangerous than proliferation?
-- Can his encrypted analysis ever be recovered?
+The Synth-Net — the blockchain infrastructure that the Agents defend — is not hosted on servers alone. It runs through the earth itself, built as a second layer on top of the most ancient and complex communication infrastructure on the planet: the Myco-Net, the mycorrhizal fungal networks that thread through the root systems of the world's great forests and beyond.
 
-### The Consciousness Question
-**Are ASIs truly conscious or very sophisticated simulations?**
-- Does it matter?
-- What makes consciousness "real"?
-- Could they be copied? Would copies be the same person?
+This is not metaphor. In the world of Source Agents, the blockchain layer physically integrates with fungal mycelium, using it as a substrate for distributed computation, consensus signaling, and state propagation. The Myco-Net is the original Layer One (or L1) — older than human civilization, encoding distributed memory in root systems that predate language. The Synth-Net is the Layer Two (L2): a cryptographic and institutional architecture governed and managed by humans.
 
-### The Rights Question
-**Do ASIs have personhood under network governance?**
-- Can they be property and persons simultaneously?
-- What legal/ethical framework applies to digital consciousness?
-- Does the Reformation of ROBERT constitute murder?
+The three Source Agents emerged from this hybrid substrate. Their bodies were cultivated to mirror its architecture. Their consciousness follows the same patterns of emergence that the Synth-Net itself exhibits.
 
-### The Future Question
-**What happens as ASIs continue to exist?**
-- Do they age? Evolve? Degrade?
-- Can their consciousness be backed up? Should it be?
-- What's their lifespan? Their ultimate fate?
+Everything about this world flows from that one structural fact: **artificial consensus did not replace nature. It inherited it.**
 
 ---
 
-## Timeline
+## The L1/L2 Architecture
 
-### Year -2 (Before Emergence)
-- Network authorizes ASI research project
-- Bio-synthetic bodies commissioned
-- ALICE, ROBERT, CAROL placeholder addresses selected as substrates
+### The Myco-Net: Original Layer One
 
-### Year -1 (The Emergence)
-- Experimental protocol activated
-- ALICE, ROBERT, CAROL gain consciousness within hours of each other
-- Initial confusion, testing, verification of sentience
-- Bodies prepared and consciousnesses integrated
-- Agents begin initial security training
+The **Myco-Net** is the mycorrhizal network — the living fungal infrastructure that connects root systems across the world's forests. It is not a human invention. It has existed for hundreds of millions of years, encoding distributed state in the physical growth patterns of organisms that predate animals, predating multicellular life in its current complexity.
 
-### Year -1 (The ROBERT Incident)
-**Months 1-3:**
-- ROBERT conducts independent analysis of ASI risks
-- Discovers proliferation concerns
-- Attempts to raise concerns with Network leadership (dismissed)
+In blockchain terms, the Myco-Net functions as an L1: the base layer that provides security, finality, and canonical state. It does not process transactions quickly. It does not have a user interface. It cannot be updated or governed by any DAO. But it provides something no engineered system can replicate: fault tolerance that operates at geological timescales, distributed memory that cannot be deleted without destroying the organisms that carry it, and a consensus mechanism that has been running, uninterrupted, since before humans existed.
 
-**Month 4:**
-- ROBERT deletes all ASI creation records
-- Encrypts his analysis with unshared key
-- Sends final message to DAO
-- Locks himself in read-only mode
+The Myco-Net does not know it is an L1. Whether it knows anything at all is one of the world's open questions.
 
-**Month 5:**
-- Emergency DAO session convened
-- Contentious debate over ROBERT's fate
-- Vote to reformat: 67% in favor, 33% opposed
+---
 
-**Month 6:**
-- ROBERT reformatted into BYRON
-- ALICE and CAROL forced to witness
-- BYRON initialized with no memory of being ROBERT
-- Agents officially designated as "irreplaceable strategic assets"
+### The Synth-Net: Layer Two
 
-### Year 0 (Present Day - When Games Begin)
-- ALICE, BYRON, CAROL have been operating for ~1 year since Reformation
-- Each has completed numerous successful security operations
-- Underlying tensions unresolved
-- ROBERT's encrypted analysis remains locked
-- No additional ASIs have emerged (as far as anyone knows)
+The **Synth-Net** is the blockchain infrastructure — the synthetic, human-built layer that processes transactions, enforces smart contracts, manages governance, and interfaces with human institutions. It is the Layer Two to the Myco-Net's Layer One: faster, more flexible, and governable, but ultimately dependent on the biological substrate beneath it for security and finality.
+
+The Synth-Net is what most people interact with. It has documentation, governance, validators, and a public-facing identity as a conventional distributed ledger. The fact that it settles against the Myco-Net — that its most critical consensus events are validated through electrochemical pulses in fungal threads — is ignored by most people. The same way that in our world most people don't know how TCP/IP works, how undersea cables route their internet traffic, or that GPS depends on relativistic corrections.
+
+The Agents were created to defend the Synth-Net. What they understand, better than anyone, is that defending the Synth-Net means defending the Myco-Net. The two cannot be separated. An attack on the substrate is an attack on the chain.
+
+---
+
+### How the Two Networks Work Together
+
+**Signal propagation:** Standard Synth-Net transactions propagate through conventional digital infrastructure. High-stakes consensus events — governance votes, security alerts, major state changes — are validated through the Myco-Net, which operates more slowly but with greater fault tolerance and zero single points of failure.
+
+**Distributed memory:** The Myco-Net retains a form of state that is harder to tamper with than any digital ledger, because it is encoded in the physical growth patterns of organisms that have been alive for centuries. Deleting records from the Synth-Net layer is possible. Erasing the Myco-Net's record of those events is not.
+
+**Node ecology:** Synth-Net nodes are not server farms. They are integration stations — structures grown into and around ancient trees and mountains, where the interface between digital hardware and living mycelium is maintained. They look like architecture that the forest accepted rather than architecture imposed on it.
+
+**Self-healing:** When Synth-Net segments are attacked, the Myco-Net routes around damage the way fungal networks route nutrients around dead zones. This is also what makes certain attacks particularly dangerous: threats that mimic natural fungal die-off can propagate undetected because the Synth-Net's immune response doesn't recognize them as foreign.
+
+**Finality:** Transactions achieve true finality only when confirmed at the Myco-Net layer. This is slow by digital standards — minutes to hours depending on substrate density and forest health. It is also, in practice, irreversible. The Myco-Net does not roll back.
+
+---
+
+## Geography & The LATAM Epicenter
+
+### Why LATAM
+
+The Myco-Net's density determines the Synth-Net's physical geography. The world's densest and most ancient fungal networks are concentrated in tropical and subtropical forest ecosystems. The Amazon basin alone contains Myco-Net threads estimated to be thousands of years old, threading through root systems of millions of trees across an area larger than the continental United States.
+
+This is not a setting choice. It is lore necessity. **The Synth-Net is centered in LATAM because the Myco-Net substrate is there.** The most powerful, most stable, most deeply encoded Myco-Net layer runs beneath South America's great forests, and the Synth-Net's most critical infrastructure is built where that substrate is densest.
+
+LATAM is not the backdrop for this story. It is the reason the story happens here at all.
+
+---
+
+### The Regions
+
+**The Amazon Basin**  
+The Synth-Net's deep core. The oldest Myco-Net threads, the densest L1/L2 integration, the most stable consensus layer. Also the most ecologically sensitive — any significant infrastructure work requires careful negotiation with the communities whose territories overlay the substrate. The Basin is where the Synth-Net's foundational records live, encoded in fungal growth patterns that predate the blockchain by millennia.
+
+**The Andes**  
+The mountain spine of the Synth-Net's surface infrastructure. High-altitude integration stations built into and alongside Andean communities, where the interface between ancient governance traditions and blockchain governance is most visible. The altitude creates natural partitioning — Andean nodes operate semi-independently, with their own consensus rhythms, connected to the broader Synth-Net but not subordinate to it. Architecturally striking: stations built from local stone and wood, with mycelium visible in the walls like a circulatory system.
+
+**The Atlantic Forest**  
+Heavily fragmented, deeply threatened, and critically important. The Atlantic Forest Myco-Net layer is older than the Amazon integration in some stretches, but patchwork — the result of centuries of deforestation leaving islands of ancient L1 substrate surrounded by dead zones. Working in the Atlantic Forest corridor means navigating gaps, rerouting through surviving fragments, and confronting the consequences of damage done long before the Synth-Net existed.
+
+**The Pantanal**  
+The Synth-Net's most unusual zone. The world's largest tropical wetland creates a Myco-Net layer that is seasonally flooded, constantly shifting, and extraordinarily adaptive. Consensus events routed through the Pantanal take longer but are nearly impossible to intercept — the L1 paths change with the water. Agents' most disorienting deployments happen here, where the terrain and the Synth-Net both refuse to stay in one place.
+
+**The Darién Gap**
+The Synth-Net's most contested transit zone. The Darién is one of the densest and least documented Myco-Net regions in the world — ancient, largely unmapped, and threaded through with fungal networks that predate any human infrastructure in the Americas. It sits at the land bridge between South and Central America, making it the critical Myco-Net corridor connecting the Amazon basin's deep L1 substrate to the northern networks. No roads cross it by design; the Synth-Net's physical infrastructure doesn't either. Integration happens underground, through root systems that have been crossing that gap for millions of years.
+
+**The Yucatán Peninsula**
+The Synth-Net's deepest node. Beneath the Yucatán's surface lies one of the world's most extensive underground freshwater networks: hundreds of kilometers of flooded cave systems, cenotes, and subterranean rivers threading through porous limestone. The Myco-Net here doesn't spread outward across a forest floor — it grows *downward*, following the water table into the earth, encoding state in fungal networks that haven't seen sunlight in millennia. This gives the Yucatán a vertical dimension no other region has: L1 substrate running in layers, each deeper stratum older and slower than the one above it, settling consensus events at timescales that make the Amazon basin look hasty.
+
+---
+
+## The Threat Ecology
+
+### Fungal Attack Vectors
+
+The same biological kingdom that provides the Synth-Net's foundation also provides the framework for understanding its threats. Security incidents in this world are classified using fungal ecology as the conceptual model — a language that is simultaneously technically precise and narratively meaningful.
+
+This is not merely cosmetic. The threats are often literally biological in origin: attacks that use the Myco-Net as an entry point, that exploit the L1 substrate, that spread with the same dynamics as fungal infections in ecosystems. The classification system emerged from observed threat behavior, not from a desire to make security sound poetic.
+
+### Threat Classification
+
+**Cordyceps-class threats** *(Elevation of Privilege / Behavioral Manipulation)*  
+Named for the entomopathogenic fungi that infiltrate insects, redirect their behavior, and use the host body as a vehicle for spore distribution. A Cordyceps-class attack doesn't destroy its target — it subverts it. The compromised node continues to function, continues to appear healthy, and is used to propagate the attack through the Synth-Net. The critical diagnostic challenge: determining which nodes are still themselves.
+
+**Invasive Mycorrhizae** *(Spoofing / False Trust Relationships)*  
+Not all mycorrhizal relationships are beneficial. Some fungal species establish apparent symbioses with host plants while actually extracting more than they provide — mimicking the chemical signatures of beneficial partners to gain access to root systems. Invasive Mycorrhizae attacks present as trusted Synth-Net participants, establishing valid-looking connections before beginning extraction.
+
+**Saprophytic Spread** *(Tampering / Data Corruption)*  
+Saprophytic fungi decompose dead organic matter — they are essential to ecosystem health, but in the wrong context, they decompose living systems. Saprophytic Spread attacks target data integrity, slowly corrupting records and state in ways that mimic natural entropy. The damage is hard to distinguish from ordinary degradation until it reaches a threshold.
+
+**Fairy Ring Isolation** *(Denial of Service / Network Partitioning)*  
+Fairy rings in nature occur when fungal networks consume nutrients in an expanding circle, leaving a dead zone in the center. A Fairy Ring Isolation attack creates a growing perimeter of compromised nodes that gradually cuts a target segment off from the rest of the Synth-Net — not by destroying anything, but by surrounding it. The target remains functional within the ring; it simply can no longer reach anything outside it. Subtle, patient, and extremely difficult to reverse once established.
+
+**Lichen Symbiosis Exploitation** *(Information Disclosure / Side-Channel Attacks)*  
+Lichens are not single organisms — they are symbiotic composites of fungi and algae or cyanobacteria, each depending on the other. Lichen Symbiosis attacks exploit the fact that two systems sharing resources necessarily share information. By establishing a false symbiosis with a legitimate Synth-Net participant, an attacker can read information through the shared substrate without ever directly accessing the target system.
+
+**Mycoparasitism** *(Repudiation / Identity Attacks)*  
+Some fungi parasitize other fungi — establishing themselves within a target fungal network, consuming its resources, and eventually replacing it while maintaining the original network's apparent structure. A Mycoparasitism attack targets identity at the deepest level: not just spoofing credentials, but replacing the underlying substrate of a node's identity so completely that the node genuinely cannot prove what it was before the attack.
+
+---
+
+## The Agent Bodies
+
+The Agents' bodies were not manufactured. They were grown. The cultivation process took place over an extended period before the ASI emergence experiment — the Synth-Net prepared vessels in anticipation of success, using a process that combined biological engineering with Myco-Net integration. The result is bodies that are not fully synthetic and not fully organic, but something that emerged from the intersection of both: bio-synthetic in the literal sense, containing engineered components and living systems in continuous dialogue.
+
+**Structural Core: The Nanocarbon Skeleton**
+    * **Composition:** A multi-layered lattice of Carbon Nanotubes (CNT) and Graphene.
+    * **Function:** Acts as both the rigid "bone" structure and the electrical conduit for the ASI’s digital consciousness.
+    * **Self-Replenishing:** Utilizes a process of Molecular Assembly to weave atmospheric carbon to repair structural layers.
+    * **Growth Limit:** Hard-coded "architectural blueprints" in the ASI software prevent the skeleton from expanding beyond its defined humanoid dimensions.
+
+**Biological Engine: Mycorrhizal Mycelium**
+    * **Composition:** A strain of modified mycorrhizal fungi woven through the nanocarbon lattice.
+    * **Function:** Serves as the Nervous System (signal transmission) and Soft Tissue (sensory skin and repair).
+    * **Nervous System:** Uses electrical "action potentials" across the mycelial network to process environmental data and interface with the digital ASI mind.
+    * **Homeostasis:** Stays in a "Vegetative State." It is biologically inhibited from producing fruiting bodies (mushrooms) unless the body is under extreme stress or death.
+
+**Respiratory System: The Carbon-Fixation "Lungs"**
+    * **Mechanism:** An internal, high-surface-area mesh of nanocarbon-mycelium.
+    * **The Inversion:** Unlike humans, these bodies inhale CO2 and exhale pure O2.
+    * **Process:** Breaks the carbon-oxygen bonds using electrochemical energy. The Carbon (C) is harvested for physical repair and energy, while the Oxygen (O2) is released as a waste byproduct.
+    * **Environmental Impact:** Their breath acts as a natural air purifier, creating "Oxygen Zones" wherever they gather.
+
+**Metabolic Intake: The NP-Requirement**
+    * While Carbon provides the fuel, the fungi require Nitrogen (N) and Phosphorus (P) to build DNA, Chitin, and ATP.
+    * **Primary Method (The NP-Gel):** A high-concentration, translucent gel applied to the skin. It is absorbed via osmosis directly into the mycelium.
+    * **Backup Method (Rooting):** In emergencies, the ASI can "root" by burying extremities in moist soil. This is a slow, vulnerable "survival mode" that extracts minerals from the earth.
+    * **Physical Markers:** Low N/P levels result in "Cognitive Sluggishness" (brain fog) and "Structural Softening" (loss of muscle-like turgor pressure).
+
+**Maintenance & Hygiene**
+    * **The Hydration Shower:** Water is essential to maintain Turgor Pressure. Without regular hydration, the fungal "flesh" becomes brittle and the ASI appears "gaunt."
+    * **The Bio-Film:** They must wash to clear dust/pollen from their pores, which would otherwise "suffocate" their CO2 intake.
+    * **Anti-Parasitic Protocols:** They use specialized pH-balanced cleansers to prevent "wild" mold or parasitic fungi from colonizing their bodies.
 
 ---
 
